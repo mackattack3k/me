@@ -5,3 +5,7 @@
   flex-direction: row;
   font-family: 'Red Hat Text', sans-serif;
 }
+
+div {
+  transition: background-color 250ms ease-in, color 150ms ease-in;
+}

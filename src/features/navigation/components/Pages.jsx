@@ -14,7 +14,7 @@ const Page = styled.div`
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   display: flex;
-  background: ${props => props.theme.background};
+  background-color: ${props => props.theme.background};
   color: ${props => props.theme.primary.text};
   flex: 1;
   padding: 40px;
