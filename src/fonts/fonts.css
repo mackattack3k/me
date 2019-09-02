@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Red Hat Text';
+  src: local('Red Hat Text'),
+    url('Red_Hat_Text/RedHatText-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: local('Red Hat Text'),
+    url('Red_Hat_Text/RedHatText-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: local('Red Hat Text'),
+    url('Red_Hat_Text/RedHatText-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Manjari';
+  src: local('Manjari'), url('Manjari/Manjari-Regular.ttf') format('ttf');
+}

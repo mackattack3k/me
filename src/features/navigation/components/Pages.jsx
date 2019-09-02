@@ -10,6 +10,7 @@ const Page = styled.div`
   background: #fff;
   flex: 1;
   padding: 40px;
+  overflow-y: scroll;
 `;
 
 const Pages = () => (

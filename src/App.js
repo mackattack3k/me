@@ -31,6 +31,7 @@ i18n
 
 const Background = styled.div`
   background: ${props => props.theme.dark.primary.main};
+  height: 100vh;
 `;
 
 const App = () => (
