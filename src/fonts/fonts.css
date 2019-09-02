@@ -1,22 +1,44 @@
 @font-face {
   font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 400;
   src: local('Red Hat Text'),
-    url('Red_Hat_Text/RedHatText-Regular.ttf') format('ttf');
+    url('Red_Hat_Text/RedHatText-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 700;
   src: local('Red Hat Text'),
-    url('Red_Hat_Text/RedHatText-Bold.ttf') format('ttf');
+    url('Red_Hat_Text/RedHatText-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 500;
   src: local('Red Hat Text'),
-    url('Red_Hat_Text/RedHatText-Medium.ttf') format('ttf');
+    url('Red_Hat_Text/RedHatText-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Manjari';
-  src: local('Manjari'), url('Manjari/Manjari-Regular.ttf') format('ttf');
+  src: local('Manjari'), url('Manjari/Manjari-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Proza Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Proza Libre'),
+    url('ProzaLibre/ProzaLibre-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Proza Libre';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Proza Libre'),
+    url('ProzaLibre/ProzaLibre-Bold.ttf') format('truetype');
 }

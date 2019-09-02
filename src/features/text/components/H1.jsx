@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.h1`
-  font-family: 'Manjari', sans-serif;
+  font-family: 'Proza Libre', sans-serif;
 `;
 
 const H1 = ({ children }) => <Heading>{children}</Heading>;
