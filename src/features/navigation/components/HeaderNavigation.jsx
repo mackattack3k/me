@@ -1,6 +1,7 @@
 import {
   faEnvelope,
   faGamepad,
+  faPalette,
   faUser
 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
@@ -9,6 +10,7 @@ import styled from 'styled-components';
 import { CONTACT_PAGE } from '../../contact/contactRoutes';
 import { HOME_PAGE } from '../../home/homeRoutes';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
+import { THEME_PAGE } from '../../theme/themeRoutes';
 import NavigationItem from './NavigationItem';
 
 const Background = styled.div`
@@ -31,11 +33,14 @@ const HeaderNavigation = () => {
         <NavigationItem to={HOME_PAGE} icon={faUser}>
           {t('routes.home')}
         </NavigationItem>
-        <NavigationItem to={CONTACT_PAGE} icon={faEnvelope}>
-          {t('routes.contact')}
-        </NavigationItem>
         <NavigationItem to={STATISTICS_PAGE} icon={faGamepad}>
           {t('routes.statistics')}
+        </NavigationItem>
+        <NavigationItem to={THEME_PAGE} icon={faPalette}>
+          {t('routes.theme')}
+        </NavigationItem>
+        <NavigationItem to={CONTACT_PAGE} icon={faEnvelope}>
+          {t('routes.contact')}
         </NavigationItem>
       </Nav>
     </Background>
