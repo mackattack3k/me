@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { CONTACT_PAGE } from '../../contact/contactRoutes';
 import { HOME_PAGE } from '../../home/homeRoutes';
+import ProfileBadge from '../../profile/components/ProfileBadge';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
 import { THEME_PAGE } from '../../theme/themeRoutes';
 import NavigationItem from './NavigationItem';
@@ -18,6 +19,7 @@ const Background = styled.div`
   padding: 20px;
   height: 100vh;
   box-sizing: border-box;
+  min-width: 125px;
 `;
 const Nav = styled.div`
   display: flex;
@@ -28,7 +30,7 @@ const HeaderNavigation = () => {
   const { t } = useTranslation();
   return (
     <Background>
-      <div>mackattack3k</div>
+      <ProfileBadge />
       <Nav>
         <NavigationItem to={HOME_PAGE} icon={faUser}>
           {t('routes.home')}
