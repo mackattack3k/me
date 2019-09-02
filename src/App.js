@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeaderNavigation from './features/navigation/components/HeaderNavigation';
+import PageNavigation from './features/navigation/components/PageNavigation';
 import Pages from './features/navigation/components/Pages';
 import './App.scss';
 import i18n from 'i18next';
@@ -38,7 +38,7 @@ const App = () => {
   return (
     <ThemeSelectorProvider>
       <Background className="app">
-        <HeaderNavigation />
+        <PageNavigation />
         <Pages />
       </Background>
     </ThemeSelectorProvider>

@@ -24,9 +24,10 @@ const Background = styled.div`
 const Nav = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 `;
 
-const HeaderNavigation = () => {
+const PageNavigation = () => {
   const { t } = useTranslation();
   return (
     <Background>
@@ -49,4 +50,4 @@ const HeaderNavigation = () => {
   );
 };
 
-export default HeaderNavigation;
+export default PageNavigation;
