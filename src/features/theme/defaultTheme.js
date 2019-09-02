@@ -1,4 +1,4 @@
-const themes = {
+export default {
   dark: {
     primary: {
       main: '#e0f7fa',
@@ -15,5 +15,3 @@ const themes = {
   },
   light: {}
 };
-
-export default themes;
