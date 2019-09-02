@@ -11,7 +11,7 @@ const SelectThemePage = () => {
         <input
           checked={isInDarkMode}
           type="checkbox"
-          onClick={() => setDarkMode(!isInDarkMode)}
+          onChange={() => setDarkMode(!isInDarkMode)}
         />
         dark theme
       </label>
