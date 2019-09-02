@@ -15,7 +15,7 @@ import { THEME_PAGE } from '../../theme/themeRoutes';
 import NavigationItem from './NavigationItem';
 
 const Background = styled.div`
-  background: ${props => props.theme.dark.primary.main};
+  background: ${props => props.theme.primary.main};
   padding: 20px;
   height: 100vh;
   box-sizing: border-box;

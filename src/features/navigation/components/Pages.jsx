@@ -14,7 +14,8 @@ const Page = styled.div`
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   display: flex;
-  background: #fff;
+  background: ${props => props.theme.background};
+  color: ${props => props.theme.primary.text};
   flex: 1;
   padding: 40px;
   overflow-y: scroll;

@@ -1,12 +1,12 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import HeaderNavigation from './features/navigation/components/HeaderNavigation';
 import Pages from './features/navigation/components/Pages';
 import './App.scss';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import backend from 'i18next-xhr-backend';
-import defaultTheme from './features/theme/defaultTheme';
+import { ThemeSelectorProvider } from './features/theme/components/ThemeSelectorProvider';
 import english from './features/translation/english.js';
 import swedish from './features/translation/swedish.js';
 
@@ -30,17 +30,19 @@ i18n
   });
 
 const Background = styled.div`
-  background: ${props => props.theme.dark.primary.main};
+  background: ${props => props.theme.primary.main};
   height: 100vh;
 `;
 
-const App = () => (
-  <ThemeProvider theme={defaultTheme}>
-    <Background className="app">
-      <HeaderNavigation />
-      <Pages />
-    </Background>
-  </ThemeProvider>
-);
+const App = () => {
+  return (
+    <ThemeSelectorProvider>
+      <Background className="app">
+        <HeaderNavigation />
+        <Pages />
+      </Background>
+    </ThemeSelectorProvider>
+  );
+};
 
 export default App;
