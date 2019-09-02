@@ -11,7 +11,7 @@ const NavLink = props => {
       getProps={({ isCurrent }) => {
         return {
           style: {
-            color: isCurrent ? theme.secondary.main : theme.primary.text
+            color: isCurrent ? theme.secondary.main : theme.background
           }
         };
       }}
