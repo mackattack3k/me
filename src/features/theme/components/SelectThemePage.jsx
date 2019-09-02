@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
+import H1 from '../../text/components/H1';
 import { ThemeSelectorContext } from './ThemeSelectorProvider';
 
 const SelectThemePage = () => {
   const { isInDarkMode, setDarkMode } = useContext(ThemeSelectorContext);
   return (
     <div>
-      <div>Select your theme here yo!</div>
+      <H1>Select your theme here yo!</H1>
       <label>
         <input
           checked={isInDarkMode}
