@@ -30,7 +30,8 @@ i18n
   });
 
 const Background = styled.div`
-  background: ${props => props.theme.primary.main};
+  background: ${props =>
+    `linear-gradient(to top, ${props.theme.primary.light}, ${props.theme.primary.main})`};
   height: 100vh;
 `;
 
