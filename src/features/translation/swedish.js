@@ -2,7 +2,8 @@ export default {
   routes: {
     home: 'hem',
     contact: 'kontakt',
-    statistics: 'statistik'
+    statistics: 'koola grejer',
+    theme: 'inställningar'
   },
   home: {
     title1: 'Marcus är bäst',

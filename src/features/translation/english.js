@@ -2,7 +2,8 @@ export default {
   routes: {
     home: 'home',
     contact: 'contact',
-    statistics: 'statistics'
+    statistics: 'cool stuff',
+    theme: 'settings'
   },
   home: {
     title1: 'Marcus is the best',

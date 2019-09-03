@@ -10,11 +10,17 @@ const Navigation = styled.div`
   margin: 25px 0;
 `;
 
-const NavigationItem = ({ to, icon, children, isExpanded = false }) => (
+const LinkText = styled.div`
+  margin: 5px 0;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+`;
+
+const NavigationItem = ({ to, icon, children }) => (
   <Navigation>
     <NavLink to={to}>
       <FontAwesomeIcon icon={icon} />
-      {isExpanded && <div>{children}</div>}
+      <LinkText>{children}</LinkText>
     </NavLink>
   </Navigation>
 );
