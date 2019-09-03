@@ -17,10 +17,17 @@ const Img = styled.img`
   object-position: 0 15%;
 `;
 
+const ProfileText = styled.div`
+  margin: 5px 0;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  color: ${props => props.theme.primary.text};
+`;
+
 const ProfileBadge = () => (
   <Badge>
     <Img src={profileImage} alt="Profile Marcus" />
-    mackattack3k
+    <ProfileText>mackattack3k</ProfileText>
   </Badge>
 );
 
