@@ -1,4 +1,7 @@
 export default {
+  breakPoints: {
+    medium: 900
+  },
   dark: {
     background: '#252525',
     primary: {

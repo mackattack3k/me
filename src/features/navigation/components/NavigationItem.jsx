@@ -14,6 +14,9 @@ const LinkText = styled.div`
   margin: 5px 0;
   font-size: 12px;
   letter-spacing: 1.3px;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const NavigationItem = ({ to, icon, children }) => (

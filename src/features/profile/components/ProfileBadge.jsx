@@ -22,6 +22,9 @@ const ProfileText = styled.div`
   font-size: 12px;
   letter-spacing: 1.3px;
   color: ${props => props.theme.primary.text};
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const ProfileBadge = () => (

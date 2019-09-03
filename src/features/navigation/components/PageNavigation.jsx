@@ -21,6 +21,10 @@ const Background = styled.div`
   height: 100vh;
   box-sizing: border-box;
   min-width: 125px;
+  @media (max-width: 900px) {
+    min-width: 60px;
+    padding: 20px 0;
+  }
 `;
 const Nav = styled.div`
   display: flex;
