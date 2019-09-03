@@ -11,12 +11,7 @@ const NavLink = props => {
       getProps={({ isCurrent }) => {
         return {
           style: {
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
             textDecoration: 'none',
-            fontWeight: 'bold',
             color: isCurrent ? theme.secondary.main : theme.background
           }
         };
