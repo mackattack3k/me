@@ -5056,6 +5056,11 @@ husky@^3.0.5:
     run-node "^1.0.0"
     slash "^3.0.0"
 
+i18next-browser-languagedetector@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-3.0.3.tgz#879ebe421685c70cc5cfa96191364a35ea7da742"
+  integrity sha512-1YuAogyQap0J6N4kM+6gAjZ6T7QWrp3xZCmSs0QedkNmgAKhj7FiQlCviHKl3IwbM6zJNgft4D7UDPWb1dTCMQ==
+
 i18next-xhr-backend@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/i18next-xhr-backend/-/i18next-xhr-backend-3.1.2.tgz#f9da86c81981ac245325cb2dbfd4232a5b183676"

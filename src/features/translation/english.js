@@ -12,5 +12,11 @@ export default {
     section2: 'When you know git as well as Marcus. Nothing is impossible.',
     title3: 'I want to play a game',
     section3: 'Do you want to see some cool data? Click here'
+  },
+  theme: {
+    changeThemeTitle: 'Change color here my friend',
+    darkTheme: 'Dark theme',
+    changeLanguageTitle: 'Snackar du svenska?',
+    changeLanguage: 'Ja!'
   }
 };
