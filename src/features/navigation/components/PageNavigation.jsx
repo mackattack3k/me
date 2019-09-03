@@ -20,9 +20,9 @@ const Background = styled.div`
   padding: 20px;
   height: 100vh;
   box-sizing: border-box;
-  min-width: 125px;
+  width: 130px;
   @media (max-width: 900px) {
-    min-width: 60px;
+    width: 60px;
     padding: 20px 0;
   }
 `;
