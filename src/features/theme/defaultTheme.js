@@ -4,21 +4,23 @@ export default {
   },
   dark: {
     background: '#252525',
+    backgroundFadeFrom: '#373737',
     primary: {
       main: '#06b783',
       light: '#5aeab3',
       dark: '#008656',
-      text: '#fff'
+      text: '#ebebeb'
     },
     secondary: {
       main: '#ffca28',
       light: '#fffd61',
       dark: '#c79a00',
-      text: '#fff'
+      text: '#ebebeb'
     }
   },
   light: {
     background: '#fff',
+    backgroundFadeFrom: '#ebebeb',
     primary: {
       main: '#06b783',
       light: '#5aeab3',

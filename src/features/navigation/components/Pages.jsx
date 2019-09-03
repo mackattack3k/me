@@ -14,7 +14,8 @@ const Page = styled.div`
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   display: flex;
-  background-color: ${props => props.theme.background};
+  background: ${props =>
+    `linear-gradient(to top, ${props.theme.backgroundFadeFrom}, ${props.theme.background})`};
   color: ${props => props.theme.primary.text};
   flex: 1;
   padding: 40px;
