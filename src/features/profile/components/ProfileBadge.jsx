@@ -21,7 +21,7 @@ const ProfileText = styled.div`
   margin: 5px 0;
   font-size: 12px;
   letter-spacing: 1.3px;
-  color: ${props => props.theme.primary.text};
+  color: ${props => props.theme.background};
   @media (max-width: 900px) {
     display: none;
   }
