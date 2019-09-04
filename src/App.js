@@ -1,3 +1,4 @@
+import ApolloClient from 'apollo-boost';
 import React from 'react';
 import styled from 'styled-components';
 import PageNavigation from './features/navigation/components/PageNavigation';
@@ -7,6 +8,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { ApolloProvider } from '@apollo/react-hooks';
 import { ThemeSelectorProvider } from './features/theme/components/ThemeSelectorProvider';
 import english from './features/translation/english.js';
 import swedish from './features/translation/swedish.js';
@@ -37,12 +39,20 @@ const Background = styled.div`
 `;
 
 const App = () => {
+  const client = new ApolloClient({
+    uri: 'https://api.github.com/graphql',
+    headers: {
+      authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
+    }
+  });
   return (
     <ThemeSelectorProvider>
-      <Background className="app">
-        <PageNavigation />
-        <Pages />
-      </Background>
+      <ApolloProvider client={client}>
+        <Background className="app">
+          <PageNavigation />
+          <Pages />
+        </Background>
+      </ApolloProvider>
     </ThemeSelectorProvider>
   );
 };
