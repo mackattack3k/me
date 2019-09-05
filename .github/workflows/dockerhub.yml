@@ -17,6 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: actions/docker/login@master
+      with: # Set the secret as an input
+        DOCKER_USERNAME: ${{ secrets.dockerhub_user }}
+        DOCKER_PASSWORD: ${{ secrets.dockerhub_password }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -28,5 +31,3 @@ jobs:
         yarn docker:publish
       env:
         CI: true
-        DOCKER_USERNAME: ${{ secrets.dockerhub_user }}
-        DOCKER_PASSWORD: ${{ secrets.dockerhub_password }}
