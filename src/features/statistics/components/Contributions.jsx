@@ -10,28 +10,36 @@ const ContributionsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  padding: 20px 0;
 `;
 const Contribution = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 30px 50px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
   background-color: ${props => props.theme.background};
-  margin: 20px 0;
-  :nth-child(n + 2) {
-    margin: 20px 0 20px 10px;
-  }
+  min-height: 100px;
+  flex: 1;
+  border-radius: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 8px;
 `;
 const ContributionData = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 26px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  font-size: 28px;
   color: ${props => props.theme.secondary.main};
 `;
 const ContributionComment = styled.div`
-  font-size: 16px;
+  font-size: 14px;
+  letter-spacing: 1px;
   display: flex;
   justify-content: center;
+  text-align: center;
 `;
 
 // https://www.30secondsofcode.org/snippet/deepGet

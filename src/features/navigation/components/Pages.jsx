@@ -20,11 +20,14 @@ const Page = styled.div`
   flex: 1;
   padding: 40px;
   overflow-y: scroll;
+  @media (max-width: 900px) {
+    padding: 20px 10px;
+  }
 `;
 
 const Pages = () => (
   <Page>
-    <Router>
+    <Router style={{ width: '100%' }}>
       <HomePage path={HOME_PAGE} />
       <StatisticsPage path={STATISTICS_PAGE} />
       <ContactPage path={CONTACT_PAGE} />
