@@ -1,21 +1,19 @@
 import ApolloClient from 'apollo-boost';
 import React from 'react';
 import styled from 'styled-components';
-import PageNavigation from './features/navigation/components/PageNavigation';
-import Pages from './features/navigation/components/Pages';
 import './App.scss';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { ApolloProvider } from '@apollo/react-hooks';
+import Pages from './features/navigation/components/Pages';
+import PageNavigation from './features/navigation/components/PageNavigation';
 import { ThemeSelectorProvider } from './features/theme/components/ThemeSelectorProvider';
-import english from './features/translation/english.js';
-import swedish from './features/translation/swedish.js';
+import english from './features/translation/english';
+import swedish from './features/translation/swedish';
 
 i18n
   .use(initReactI18next)
-  .use(backend)
   .use(LanguageDetector)
   .init({
     resources: {
