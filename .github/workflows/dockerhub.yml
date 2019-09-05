@@ -17,9 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: actions/docker/login@master
-      with: # Set the secret as an input
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
