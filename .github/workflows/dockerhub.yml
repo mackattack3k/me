@@ -15,6 +15,10 @@ jobs:
         node-version: [12.x]
 
     steps:
+    - uses: actions/docker/login@master
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     - name: checkout
       uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -22,12 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install, build and publish
-      uses: actions/docker/login@master
       run: |
         yarn global add cross-conf-env
         yarn docker:build
         yarn docker:publish
       env:
         CI: true
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
