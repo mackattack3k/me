@@ -15,11 +15,6 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - name: Verify login
-      run: |
-        ls -lah /github
-        ls -lah /github/home/
-        ls -lah /github/home/.docker
     - name: checkout
       uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
