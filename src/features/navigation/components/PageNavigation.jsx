@@ -18,7 +18,8 @@ const Background = styled.div`
   background: ${props =>
     `linear-gradient(to top, ${props.theme.primary.light}, ${props.theme.primary.main})`};
   padding: 20px;
-  height: 100vh;
+  height: 100%;
+  overflow-y: auto;
   box-sizing: border-box;
   width: 130px;
   @media (max-width: 900px) {
