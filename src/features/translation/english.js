@@ -19,5 +19,14 @@ export default {
     darkTheme: 'Dark theme',
     changeLanguageTitle: 'Snackar du svenska?',
     changeLanguage: 'Ja!'
+  },
+  statistics: {
+    github:
+      'Wondering what Marcus has been up to on github? Check out this compact view!'
+  },
+  git: {
+    total_commits: 'Commits since last year',
+    issue_count: 'Issues closed',
+    latest_star: 'Is the latest starred repository'
   }
 };

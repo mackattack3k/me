@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/react-hooks';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ExternalLink from '../../navigation/components/ExternalLink';
 import { GITHUB_CONTRIBUTIONS } from '../statisticsQueries';
@@ -48,6 +49,7 @@ const deepGet = (obj, keys) =>
 const NO_HITS = 0;
 
 const Contributions = () => {
+  const { t } = useTranslation();
   const { loading, error, data } = useQuery(GITHUB_CONTRIBUTIONS);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -75,11 +77,11 @@ const Contributions = () => {
     <ContributionsContainer>
       <Contribution>
         <ContributionData>{totalCommitContributions}</ContributionData>
-        <ContributionComment>Commits since last year</ContributionComment>
+        <ContributionComment>{t('git.total_commits')}</ContributionComment>
       </Contribution>
       <Contribution>
         <ContributionData>{issueCount}</ContributionData>
-        <ContributionComment>Issues handled all time</ContributionComment>
+        <ContributionComment>{t('git.issue_count')}</ContributionComment>
       </Contribution>
       <Contribution>
         <ContributionData>
@@ -88,9 +90,7 @@ const Contributions = () => {
             {latestStarRepoName}
           </ExternalLink>
         </ContributionData>
-        <ContributionComment>
-          Is the latest starred repository
-        </ContributionComment>
+        <ContributionComment>{t('git.latest_star')}</ContributionComment>
       </Contribution>
     </ContributionsContainer>
   );

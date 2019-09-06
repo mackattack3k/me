@@ -18,5 +18,14 @@ export default {
     darkTheme: 'Mörkt tema',
     changeLanguageTitle: 'You rather speak english?',
     changeLanguage: 'Yes!'
+  },
+  statistics: {
+    github:
+      'Undrar du var Marcus håller på med på github? Kolla in sammanfattningen nedan!'
+  },
+  git: {
+    total_commits: 'Commits sedan förra året',
+    issue_count: 'Stängda issues',
+    latest_star: 'Senaste stjärnmarkerade repot'
   }
 };
