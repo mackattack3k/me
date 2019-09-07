@@ -6,8 +6,8 @@ WORKDIR /app
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
-ENV GITHUB_PERSONAL_ACCESS_TOKEN=''
-ENV SPOTIFY_ACCESS_TOKEN=''
+ENV REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN=''
+ENV REACT_APP_SPOTIFY_CLIENT=''
 
 # install and cache app dependencies
 COPY . ./
