@@ -12,6 +12,7 @@ const PrimaryButton = styled.button`
   background: transparent;
   color: ${props => props.theme.primary.text};
   background: ${props => props.theme.secondary.main};
+  cursor: pointer;
 `;
 
 const Button = ({ onClick, children, type }) => (
