@@ -5,6 +5,7 @@ import { RestLink } from 'apollo-link-rest';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { useTranslation } from 'react-i18next';
 import Button from '../../button/components/Button';
 import { SpotifyAccessContext } from '../../spotify/components/SpotifyAccessProvider';
 import H1 from '../../text/components/H1';
@@ -12,6 +13,7 @@ import SpotifyUser from './SpotifyUser';
 import StatisticsPageContent from './StatisticsPageContent';
 
 const SpotifyStatistics = () => {
+  const { t } = useTranslation();
   const { AUTHORIZATION, authorize } = useContext(SpotifyAccessContext);
   if (!AUTHORIZATION) {
     return <Button onClick={authorize}>Login to Spotify</Button>;
@@ -32,6 +34,7 @@ const SpotifyStatistics = () => {
         Spotify <FontAwesomeIcon icon={faSpotify} />
       </H1>
       <StatisticsPageContent>
+        {t('statistics.spotify')}
         <SpotifyUser />
       </StatisticsPageContent>
     </ApolloProvider>

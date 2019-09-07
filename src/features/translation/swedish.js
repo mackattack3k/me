@@ -21,7 +21,8 @@ export default {
   },
   statistics: {
     github:
-      'Undrar du var Marcus håller på med på github? Kolla in sammanfattningen nedan!'
+      'Undrar du var Marcus håller på med på github? Kolla in sammanfattningen nedan!',
+    spotify: 'Kolla in den här häftiga Spotify datan'
   },
   git: {
     total_commits: 'Commits sedan förra året',

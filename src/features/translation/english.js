@@ -22,7 +22,8 @@ export default {
   },
   statistics: {
     github:
-      'Wondering what Marcus has been up to on github? Check out this compact view!'
+      'Wondering what Marcus has been up to on github? Check out this compact view!',
+    spotify: 'Check out this rad Spotify data'
   },
   git: {
     total_commits: 'Commits since last year',
