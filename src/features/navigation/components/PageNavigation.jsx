@@ -30,7 +30,7 @@ const Background = styled.div`
 const Nav = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 20px;
 `;
 
 const PageNavigation = () => {
