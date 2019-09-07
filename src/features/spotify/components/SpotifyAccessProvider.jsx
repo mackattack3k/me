@@ -35,7 +35,7 @@ const SpotifyAccessProvider = ({ children }) => {
   return (
     <SpotifyAccessContext.Provider
       value={{
-        AUTHORIZATION: authorization,
+        AUTHORIZATION: authorization.auth,
         persistAuthorization,
         authorize
       }}

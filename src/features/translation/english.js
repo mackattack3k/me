@@ -28,5 +28,9 @@ export default {
     total_commits: 'Commits since last year',
     issue_count: 'Issues closed',
     latest_star: 'Is the latest starred repository'
+  },
+  spotify_user: {
+    go_to_profile: 'Go to Spotify profile',
+    followers: 'Number of followers, yay!'
   }
 };

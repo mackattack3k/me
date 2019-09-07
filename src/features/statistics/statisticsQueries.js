@@ -35,8 +35,25 @@ export const GITHUB_CONTRIBUTIONS = gql`
 
 export const SPOTIFY_USER = gql`
   {
-    person @rest(type: "Person", path: "users/mackattack3k/") {
-      name
+    user @rest(type: "user", path: "users/cocoix") {
+      href
+      display_name
+      id
+      images
+      external_urls @type(name: "external_urls") {
+        spotify
+      }
+      followers @type(name: "followers") {
+        total
+      }
+    }
+  }
+`;
+
+export const SPOTIFY_USER_PLAYLISTS = gql`
+  {
+    playlist @rest(type: "user", path: "users/cocoix/playlists") {
+      total
     }
   }
 `;

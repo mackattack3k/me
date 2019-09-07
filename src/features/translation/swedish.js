@@ -27,5 +27,9 @@ export default {
     total_commits: 'Commits sedan förra året',
     issue_count: 'Stängda issues',
     latest_star: 'Senaste stjärnmarkerade repot'
+  },
+  spotify_user: {
+    go_to_profile: 'Öppna Spotify profil',
+    follower: 'Antal följare, tjoho!'
   }
 };
