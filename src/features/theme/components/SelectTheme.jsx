@@ -7,7 +7,7 @@ import H1 from '../../text/components/H1';
 import { ThemeSelectorContext } from './ThemeSelectorProvider';
 
 const ToggleButton = styled.button`
-  padding: 5px 10px;
+  padding: 0;
   margin: 0;
   border: none;
   outline: none;
