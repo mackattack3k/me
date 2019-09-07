@@ -30,6 +30,6 @@ export default {
   },
   spotify_user: {
     go_to_profile: 'Öppna Spotify profil',
-    follower: 'Antal följare, tjoho!'
+    followers: 'Antal följare, tjoho!'
   }
 };
