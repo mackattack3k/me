@@ -16,7 +16,7 @@ export default {
   theme: {
     changeThemeTitle: 'Byt färg här kompis',
     darkTheme: 'Mörkt tema',
-    changeLanguageTitle: 'You rather speak english?',
+    changeLanguageTitle: 'Do you speak english?',
     changeLanguage: 'Yes!'
   },
   statistics: {
