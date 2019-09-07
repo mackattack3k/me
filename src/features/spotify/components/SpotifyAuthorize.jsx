@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { parse } from 'qs';
 import { HOME_PAGE } from '../../home/homeRoutes';
+import LoadingSpinner from '../../loading/components/LoadingSpinner';
 import { SpotifyAccessContext } from './SpotifyAccessProvider';
 
 const SpotifyAuthorize = ({ location }) => {
@@ -23,11 +24,11 @@ const SpotifyAuthorize = ({ location }) => {
   const navigateTo = originalUrl || `/${HOME_PAGE}`;
   if (AUTHORIZATION) {
     navigate(navigateTo);
-    return <div>Loading</div>;
+    return <LoadingSpinner />;
   }
   persistAuthorization({ bearer, token, expiresIn });
   navigate(navigateTo);
-  return <div>Loading</div>;
+  return <LoadingSpinner />;
 };
 
 SpotifyAuthorize.propTypes = {

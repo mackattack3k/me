@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/react-hooks';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import LoadingSpinner from '../../loading/components/LoadingSpinner';
 import ExternalLink from '../../navigation/components/ExternalLink';
 import { GITHUB_CONTRIBUTIONS } from '../statisticsQueries';
 
@@ -51,7 +52,6 @@ const NO_HITS = 0;
 const Contributions = () => {
   const { t } = useTranslation();
   const { loading, error, data } = useQuery(GITHUB_CONTRIBUTIONS);
-  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   const totalCommitContributions =
     deepGet(data, [
@@ -66,29 +66,36 @@ const Contributions = () => {
     'nodes',
     '0'
   ]);
-  const {
-    url: latestStarRepoUrl,
-    name: latestStarRepoName,
-    owner
-  } = latestStar;
-  const { url: latestStarOrgUrl, login: latestStarOrg } = owner;
-
+  const { url: latestStarRepoUrl, name: latestStarRepoName, owner } =
+    latestStar || {};
+  const { url: latestStarOrgUrl, login: latestStarOrg } = owner || {};
   return (
     <ContributionsContainer>
       <Contribution>
-        <ContributionData>{totalCommitContributions}</ContributionData>
+        <ContributionData>
+          {loading ? <LoadingSpinner /> : totalCommitContributions}
+        </ContributionData>
         <ContributionComment>{t('git.total_commits')}</ContributionComment>
       </Contribution>
       <Contribution>
-        <ContributionData>{issueCount}</ContributionData>
+        <ContributionData>
+          {loading ? <LoadingSpinner /> : issueCount}
+        </ContributionData>
         <ContributionComment>{t('git.issue_count')}</ContributionComment>
       </Contribution>
       <Contribution>
         <ContributionData>
-          <ExternalLink to={latestStarOrgUrl}>{latestStarOrg}</ExternalLink>/
-          <ExternalLink to={latestStarRepoUrl}>
-            {latestStarRepoName}
-          </ExternalLink>
+          {loading ? (
+            <LoadingSpinner />
+          ) : (
+            <>
+              <ExternalLink to={latestStarOrgUrl}>{latestStarOrg}</ExternalLink>
+              <span>/</span>
+              <ExternalLink to={latestStarRepoUrl}>
+                {latestStarRepoName}
+              </ExternalLink>
+            </>
+          )}
         </ContributionData>
         <ContributionComment>{t('git.latest_star')}</ContributionComment>
       </Contribution>
