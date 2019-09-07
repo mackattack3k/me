@@ -15,7 +15,7 @@ export default {
     section3: 'Do you want to see some cool data? Click here'
   },
   theme: {
-    changeThemeTitle: 'Change color here my friend',
+    changeThemeTitle: 'Make it easier on your eyes',
     darkTheme: 'Dark theme',
     changeLanguageTitle: 'Snackar du svenska?',
     changeLanguage: 'Ja!'
