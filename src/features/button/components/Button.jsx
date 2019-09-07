@@ -11,7 +11,7 @@ const PrimaryButton = styled.button`
   outline: none;
   background: transparent;
   color: ${props => props.theme.primary.text};
-  background: ${props => props.theme.primary.main};
+  background: ${props => props.theme.secondary.main};
 `;
 
 const Button = ({ onClick, children, type }) => (
