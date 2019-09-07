@@ -1,14 +1,13 @@
 import { ApolloProvider } from '@apollo/react-hooks';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ApolloBoostClient from 'apollo-boost';
 import styled from 'styled-components';
-import Button from '../../button/components/Button';
 import H1 from '../../text/components/H1';
-import { SpotifyAccessContext } from '../../spotify/components/SpotifyAccessProvider';
 import Contributions from './Contributions';
+import SpotifyStatistics from './SpotifyStatistics';
 
 const Statistics = styled.div`
   display: flex;
@@ -27,7 +26,6 @@ const StatisticsPage = () => {
       authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
     }
   });
-  const { AUTHORIZATION, authorize } = useContext(SpotifyAccessContext);
   return (
     <Statistics>
       <ApolloProvider client={githubClient}>
@@ -37,12 +35,7 @@ const StatisticsPage = () => {
         <GitHelp>{t('statistics.github')}</GitHelp>
         <Contributions />
       </ApolloProvider>
-      {AUTHORIZATION ? (
-        <div>Show spotify data</div>
-      ) : (
-        <Button onClick={authorize}>Login to Spotify</Button>
-      )}
-      {/* <SpotifyStatistics /> */}
+      <SpotifyStatistics />
     </Statistics>
   );
 };
