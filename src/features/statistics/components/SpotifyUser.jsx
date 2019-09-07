@@ -45,7 +45,7 @@ const SpotifyUser = () => {
   const { display_name: name, external_urls: urls, followers, id } =
     deepGet(data, ['user']) || {};
   const { total: amountOfFollowers = 0 } = followers || {};
-  const { spotify: profileUrl } = urls || {};
+  const { spotify: profileUrl = '' } = urls || {};
   const profileImage = deepGet(data, ['user', 'images', '0', 'url']);
   return (
     <SpotifyUserCards>
