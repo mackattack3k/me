@@ -1,5 +1,5 @@
 import { ApolloProvider } from '@apollo/react-hooks';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faSpotify } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -35,6 +35,9 @@ const StatisticsPage = () => {
         <GitHelp>{t('statistics.github')}</GitHelp>
         <Contributions />
       </ApolloProvider>
+      <H1>
+        Spotify <FontAwesomeIcon icon={faSpotify} />
+      </H1>
     </Statistics>
   );
 };
