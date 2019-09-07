@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/react-hooks';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import deepGet from '../../deepGet';
 import ExternalLink from '../../navigation/components/ExternalLink';
 import { GITHUB_CONTRIBUTIONS } from '../statisticsQueries';
 import StatisticsCard from './StatisticsCard';
@@ -17,9 +18,6 @@ const ContributionsContainer = styled.div`
   padding: 20px 0;
 `;
 
-// https://www.30secondsofcode.org/snippet/deepGet
-const deepGet = (obj, keys) =>
-  keys.reduce((xs, x) => (xs && xs[x] ? xs[x] : null), obj);
 const NO_HITS = 0;
 
 const Contributions = () => {
