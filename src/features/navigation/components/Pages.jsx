@@ -5,10 +5,10 @@ import ContactPage from '../../contact/components/ContactPage';
 import { CONTACT_PAGE } from '../../contact/contactRoutes';
 import HomePage from '../../home/components/HomePage';
 import { HOME_PAGE } from '../../home/homeRoutes';
+import SettingsPage from '../../settings/components/SettingsPage';
 import StatisticsPage from '../../statistics/components/StatisticsPage';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
-import SelectThemePage from '../../theme/components/SelectThemePage';
-import { THEME_PAGE } from '../../theme/themeRoutes';
+import { SETTINGS_PAGE } from '../../settings/settingsRoutes';
 
 const Page = styled.div`
   border-top-left-radius: 40px;
@@ -31,7 +31,7 @@ const Pages = () => (
       <HomePage path={HOME_PAGE} />
       <StatisticsPage path={STATISTICS_PAGE} />
       <ContactPage path={CONTACT_PAGE} />
-      <SelectThemePage path={THEME_PAGE} />
+      <SettingsPage path={SETTINGS_PAGE} />
     </Router>
   </Page>
 );

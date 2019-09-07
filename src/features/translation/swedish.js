@@ -3,7 +3,7 @@ export default {
     home: 'hem',
     contact: 'kontakt',
     statistics: 'koola grejer',
-    theme: 'inställningar'
+    settings: 'inställningar'
   },
   home: {
     title1: 'Marcus är bäst',

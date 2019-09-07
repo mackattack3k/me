@@ -11,7 +11,7 @@ import { CONTACT_PAGE } from '../../contact/contactRoutes';
 import { HOME_PAGE } from '../../home/homeRoutes';
 import ProfileBadge from '../../profile/components/ProfileBadge';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
-import { THEME_PAGE } from '../../theme/themeRoutes';
+import { SETTINGS_PAGE } from '../../settings/settingsRoutes';
 import NavigationItem from './NavigationItem';
 
 const Background = styled.div`
@@ -45,8 +45,8 @@ const PageNavigation = () => {
         <NavigationItem to={STATISTICS_PAGE} icon={faGamepad}>
           {t('routes.statistics')}
         </NavigationItem>
-        <NavigationItem to={THEME_PAGE} icon={faPalette}>
-          {t('routes.theme')}
+        <NavigationItem to={SETTINGS_PAGE} icon={faPalette}>
+          {t('routes.settings')}
         </NavigationItem>
         <NavigationItem to={CONTACT_PAGE} icon={faEnvelope}>
           {t('routes.contact')}

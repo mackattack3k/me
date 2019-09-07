@@ -3,7 +3,7 @@ export default {
     home: 'home',
     contact: 'contact',
     statistics: 'cool stuff',
-    theme: 'settings'
+    settings: 'settings'
   },
   home: {
     title1: 'Marcus is the best',
