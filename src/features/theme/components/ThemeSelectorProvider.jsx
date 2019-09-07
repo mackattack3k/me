@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { ThemeProvider } from 'styled-components';
+import PropTypes from 'prop-types';
 import defaultTheme from '../defaultTheme';
-import { createContext } from 'react';
 import useTheme from '../useTheme';
 
 const ThemeSelectorContext = createContext(null);
@@ -22,6 +22,10 @@ const ThemeSelectorProvider = ({ children }) => {
       </ThemeProvider>
     </ThemeSelectorContext.Provider>
   );
+};
+
+ThemeSelectorProvider.propTypes = {
+  children: PropTypes.node.isRequired
 };
 
 export { ThemeSelectorProvider, ThemeSelectorContext };

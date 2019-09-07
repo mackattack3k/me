@@ -6,6 +6,8 @@ import { CONTACT_PAGE } from '../../contact/contactRoutes';
 import HomePage from '../../home/components/HomePage';
 import { HOME_PAGE } from '../../home/homeRoutes';
 import SettingsPage from '../../settings/components/SettingsPage';
+import SpotifyAuthorize from '../../spotify/components/SpotifyAuthorize';
+import { AUTHORIZE_SPOTIFY } from '../../spotify/spotifyRoutes';
 import StatisticsPage from '../../statistics/components/StatisticsPage';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
 import { SETTINGS_PAGE } from '../../settings/settingsRoutes';
@@ -32,6 +34,7 @@ const Pages = () => (
       <StatisticsPage path={STATISTICS_PAGE} />
       <ContactPage path={CONTACT_PAGE} />
       <SettingsPage path={SETTINGS_PAGE} />
+      <SpotifyAuthorize path={AUTHORIZE_SPOTIFY} />
     </Router>
   </Page>
 );

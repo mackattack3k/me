@@ -32,3 +32,11 @@ export const GITHUB_CONTRIBUTIONS = gql`
     }
   }
 `;
+
+export const SPOTIFY_USER = gql`
+  {
+    person @rest(type: "Person", path: "users/mackattack3k/") {
+      name
+    }
+  }
+`;
