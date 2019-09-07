@@ -32,10 +32,11 @@ const SpotifyAccessProvider = ({ children }) => {
       expiresAt
     });
   };
+  const { AUTHORIZATION } = authorization || {};
   return (
     <SpotifyAccessContext.Provider
       value={{
-        AUTHORIZATION: authorization.auth,
+        AUTHORIZATION,
         persistAuthorization,
         authorize
       }}
