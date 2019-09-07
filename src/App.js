@@ -2,33 +2,13 @@ import ApolloClient from 'apollo-boost';
 import React from 'react';
 import styled from 'styled-components';
 import './App.scss';
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { setupLanguage } from './features/language/initLanguage';
 import Pages from './features/navigation/components/Pages';
 import PageNavigation from './features/navigation/components/PageNavigation';
 import { ThemeSelectorProvider } from './features/theme/components/ThemeSelectorProvider';
-import english from './features/translation/english';
-import swedish from './features/translation/swedish';
 
-i18n
-  .use(initReactI18next)
-  .use(LanguageDetector)
-  .init({
-    resources: {
-      en: {
-        translation: english
-      },
-      sv: {
-        translation: swedish
-      }
-    },
-    fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false
-    }
-  });
+setupLanguage();
 
 const Background = styled.div`
   background: ${props =>
