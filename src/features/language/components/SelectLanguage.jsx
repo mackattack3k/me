@@ -1,6 +1,7 @@
 import i18next from 'i18next';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Button from '../../button/components/Button';
 import { AVAILABLE_LANGUAGES } from '../initLanguage';
 import H1 from '../../text/components/H1';
 
@@ -17,9 +18,9 @@ const SelectLanguage = () => {
   return (
     <>
       <H1>{t('theme.changeLanguageTitle')}</H1>
-      <button type="button" onClick={changeLanguage}>
+      <Button type="button" onClick={changeLanguage}>
         {t('theme.changeLanguage')}
-      </button>
+      </Button>
     </>
   );
 };
