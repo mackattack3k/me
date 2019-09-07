@@ -1,8 +1,6 @@
-import ApolloClient from 'apollo-boost';
 import React from 'react';
 import styled from 'styled-components';
 import './App.scss';
-import { ApolloProvider } from '@apollo/react-hooks';
 import { setupLanguage } from './features/language/initLanguage';
 import Pages from './features/navigation/components/Pages';
 import PageNavigation from './features/navigation/components/PageNavigation';
@@ -17,20 +15,12 @@ const Background = styled.div`
 `;
 
 const App = () => {
-  const client = new ApolloClient({
-    uri: 'https://api.github.com/graphql',
-    headers: {
-      authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
-    }
-  });
   return (
     <ThemeSelectorProvider>
-      <ApolloProvider client={client}>
-        <Background className="app">
-          <PageNavigation />
-          <Pages />
-        </Background>
-      </ApolloProvider>
+      <Background className="app">
+        <PageNavigation />
+        <Pages />
+      </Background>
     </ThemeSelectorProvider>
   );
 };
