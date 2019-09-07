@@ -1,7 +1,7 @@
 import {
+  faCog,
   faEnvelope,
-  faGamepad,
-  faPalette,
+  faGlasses,
   faUser
 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
@@ -42,10 +42,10 @@ const PageNavigation = () => {
         <NavigationItem to={HOME_PAGE} icon={faUser}>
           {t('routes.home')}
         </NavigationItem>
-        <NavigationItem to={STATISTICS_PAGE} icon={faGamepad}>
+        <NavigationItem to={STATISTICS_PAGE} icon={faGlasses}>
           {t('routes.statistics')}
         </NavigationItem>
-        <NavigationItem to={SETTINGS_PAGE} icon={faPalette}>
+        <NavigationItem to={SETTINGS_PAGE} icon={faCog}>
           {t('routes.settings')}
         </NavigationItem>
         <NavigationItem to={CONTACT_PAGE} icon={faEnvelope}>
