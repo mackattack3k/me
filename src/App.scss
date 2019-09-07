@@ -7,6 +7,8 @@
   overflow: hidden;
 }
 
-div {
+div,
+span,
+button {
   transition: background-color 250ms ease-in, color 150ms ease-in;
 }
