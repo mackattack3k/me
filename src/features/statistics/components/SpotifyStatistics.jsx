@@ -9,6 +9,7 @@ import Button from '../../button/components/Button';
 import { SpotifyAccessContext } from '../../spotify/components/SpotifyAccessProvider';
 import H1 from '../../text/components/H1';
 import SpotifyUser from './SpotifyUser';
+import StatisticsPageContent from './StatisticsPageContent';
 
 const SpotifyStatistics = () => {
   const { AUTHORIZATION, authorize } = useContext(SpotifyAccessContext);
@@ -30,7 +31,9 @@ const SpotifyStatistics = () => {
       <H1>
         Spotify <FontAwesomeIcon icon={faSpotify} />
       </H1>
-      <SpotifyUser />
+      <StatisticsPageContent>
+        <SpotifyUser />
+      </StatisticsPageContent>
     </ApolloProvider>
   );
 };
