@@ -10,17 +10,12 @@ const Card = styled.div`
   padding: 30px;
   background-color: ${props => props.theme.background};
   min-height: 100px;
+  min-width: 140px;
   flex: 1;
   border-radius: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   margin: 8px;
-  &:first-child {
-    margin-right: 8px;
-  }
-  &:last-child {
-    margin-left: 8px;
-  }
 `;
 
 const StatisticsCard = ({ children }) => <Card>{children}</Card>;
