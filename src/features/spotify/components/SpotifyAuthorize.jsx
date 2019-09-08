@@ -1,9 +1,8 @@
-import { navigate } from '@reach/router';
+import { Redirect, navigate } from '@reach/router';
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { parse } from 'qs';
 import { HOME_PAGE } from '../../home/homeRoutes';
-import LoadingSpinner from '../../loading/components/LoadingSpinner';
 import { SpotifyAccessContext } from './SpotifyAccessProvider';
 
 const SpotifyAuthorize = ({ location }) => {
@@ -12,7 +11,7 @@ const SpotifyAuthorize = ({ location }) => {
     SpotifyAccessContext
   );
   if (!hash) {
-    return <div>Are you here by mistake? I will redirect you now</div>;
+    return <Redirect to={HOME_PAGE} noThrow />;
   }
   const {
     access_token: token,
@@ -21,14 +20,14 @@ const SpotifyAuthorize = ({ location }) => {
     token_type: bearer
   } = parse(hash.slice(1));
   const { originalUrl } = parse(state);
-  const navigateTo = originalUrl || `/${HOME_PAGE}`;
-  if (AUTHORIZATION) {
-    navigate(navigateTo);
-    return <LoadingSpinner />;
+  if (!AUTHORIZATION) {
+    persistAuthorization({ bearer, token, expiresIn });
   }
-  persistAuthorization({ bearer, token, expiresIn });
-  navigate(navigateTo);
-  return <LoadingSpinner />;
+  if (originalUrl) {
+    navigate(originalUrl);
+    return <></>;
+  }
+  return <Redirect to={HOME_PAGE} noThrow />;
 };
 
 SpotifyAuthorize.propTypes = {
