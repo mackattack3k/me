@@ -21,7 +21,7 @@ const Page = styled.div`
   color: ${props => props.theme.primary.text};
   flex: 1;
   padding: 40px;
-  overflow-y: scroll;
+  overflow-y: auto;
   @media (max-width: 900px) {
     padding: 20px 10px;
   }
