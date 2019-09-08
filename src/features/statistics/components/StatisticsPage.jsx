@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import styled from 'styled-components';
-import GithubStatistics from './GithubStatistics';
-import SpotifyStatistics from './SpotifyStatistics';
+import LoadingSpinner from '../../loading/components/LoadingSpinner';
+
+const GithubStatistics = lazy(() => import('./GithubStatistics'));
+const SpotifyStatistics = lazy(() => import('./SpotifyStatistics'));
 
 const Statistics = styled.div`
   display: flex;
@@ -11,8 +13,10 @@ const Statistics = styled.div`
 
 const StatisticsPage = () => (
   <Statistics>
-    <GithubStatistics />
-    <SpotifyStatistics />
+    <Suspense fallback={<LoadingSpinner />}>
+      <GithubStatistics />
+      <SpotifyStatistics />
+    </Suspense>
   </Statistics>
 );
 
