@@ -25,13 +25,13 @@ export default {
       main: '#06b783',
       light: '#5aeab3',
       dark: '#008656',
-      text: '#000'
+      text: '#3e3e3e'
     },
     secondary: {
       main: '#ffca28',
       light: '#fffd61',
       dark: '#c79a00',
-      text: '#000'
+      text: '#3e3e3e'
     }
   }
 };
