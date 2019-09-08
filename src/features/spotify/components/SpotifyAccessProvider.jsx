@@ -22,17 +22,23 @@ const SpotifyAccessProvider = ({ children }) => {
     const state = `originalUrl=${encodeURIComponent(href)}`;
     window.location.href = `${spotifyAuthUri}?client_id=${CLIENT_ID}&response_type=token&state=${state}&redirect_uri=${redirectUri}`;
   };
-  function addMinutes(minutes) {
-    return new Date(new Date().getTime() + minutes * 60000);
-  }
   const persistAuthorization = ({ bearer, token, expiresIn }) => {
-    const expiresAt = addMinutes(expiresIn).toISOString();
+    const expiresAt = new Date(new Date().getTime() + 1000 * expiresIn);
     setAuthorization({
-      auth: `${bearer} ${token}`,
+      access: `${bearer} ${token}`,
       expiresAt
     });
   };
-  const { auth: AUTHORIZATION } = authorization || {};
+  const hasExpired = () => {
+    const { expiresAt } = authorization || {};
+    const now = new Date();
+    const diff = now - new Date(expiresAt);
+    return diff > 0;
+  };
+  if (hasExpired()) {
+    setAuthorization(undefined);
+  }
+  const { access: AUTHORIZATION } = authorization || {};
   return (
     <SpotifyAccessContext.Provider
       value={{
