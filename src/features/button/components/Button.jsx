@@ -10,7 +10,7 @@ const PrimaryButton = styled.button`
   border-radius: 2px;
   outline: none;
   background: transparent;
-  color: ${props => props.theme.primary.text};
+  color: #3e3e3e;
   background: ${props => props.theme.secondary.main};
   cursor: pointer;
 `;
