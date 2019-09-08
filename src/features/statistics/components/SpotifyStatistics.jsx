@@ -6,18 +6,20 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useTranslation } from 'react-i18next';
+import styled from 'styled-components';
 import Button from '../../button/components/Button';
 import { SpotifyAccessContext } from '../../spotify/components/SpotifyAccessProvider';
 import H1 from '../../text/components/H1';
 import SpotifyUser from './SpotifyUser';
 import StatisticsPageContent from './StatisticsPageContent';
 
+const AuthorizeButton = styled.div`
+  margin: 10px 0 20px;
+`;
+
 const SpotifyStatistics = () => {
   const { t } = useTranslation();
   const { AUTHORIZATION, authorize } = useContext(SpotifyAccessContext);
-  if (!AUTHORIZATION) {
-    return <Button onClick={authorize}>Login to Spotify</Button>;
-  }
   const restLink = new RestLink({
     uri: 'https://api.spotify.com/v1/',
     headers: {
@@ -34,8 +36,17 @@ const SpotifyStatistics = () => {
         Spotify <FontAwesomeIcon icon={faSpotify} />
       </H1>
       <StatisticsPageContent>
-        {t('statistics.spotify')}
-        <SpotifyUser />
+        {AUTHORIZATION
+          ? t('statistics.spotify')
+          : t('statistics.spotify_logged_out')}
+        {AUTHORIZATION && <SpotifyUser />}
+        {!AUTHORIZATION && (
+          <AuthorizeButton>
+            <Button onClick={authorize}>
+              {t('statistics.log_in_spotify')}
+            </Button>
+          </AuthorizeButton>
+        )}
       </StatisticsPageContent>
     </ApolloProvider>
   );

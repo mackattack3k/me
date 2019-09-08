@@ -37,8 +37,6 @@ const SpotifyLinkText = styled.span`
 const SpotifyUser = () => {
   const { t } = useTranslation();
   const { loading, error, data } = useQuery(SPOTIFY_USER);
-  // eslint-disable-next-line no-console
-  console.log({ loading, error, data });
   if (error) {
     return <>Spotify error :(</>;
   }

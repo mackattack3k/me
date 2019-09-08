@@ -23,7 +23,11 @@ export default {
   statistics: {
     github:
       'Wondering what Marcus has been up to on github? Check out this compact view!',
-    spotify: 'Check out this rad Spotify data'
+    spotify: 'Check out this rad Spotify data',
+    spotify_logged_out:
+      'To view others spotify data you have to log in to your account first. You will be logged' +
+      ' in for 1 hour',
+    log_in_spotify: 'Log in to Spotify'
   },
   git: {
     total_commits: 'Commits since last year',
