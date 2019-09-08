@@ -8,7 +8,7 @@ const SpotifyAccessContext = createContext(null);
 const SpotifyAccessProvider = ({ children }) => {
   const [authorization, setAuthorization] = useLocalStorage('spotify');
   const authorize = () => {
-    const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT;
+    const CLIENT_ID = window.ENV.SPOTIFY_CLIENT_ID;
     if (!CLIENT_ID) {
       // eslint-disable-next-line no-console
       console.log('No client id, show error', { CLIENT_ID });
