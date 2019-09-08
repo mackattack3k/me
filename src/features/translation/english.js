@@ -6,13 +6,14 @@ export default {
     settings: 'settings'
   },
   home: {
-    title1: 'Marcus is the best',
+    title1: 'Marcus is the best 👨‍💻',
     section1:
       'Marcus is amazing and knows how to code good very good. Like very good.',
-    title2: 'git gud',
+    title2: '💻 git gud',
     section2: 'When you know git as well as Marcus. Nothing is impossible.',
-    title3: 'I want to play a game',
-    section3: 'Do you want to see some cool data? Click here'
+    title3: 'Cool data 😎',
+    section3: 'Do you want to see som real time stats?',
+    click_here: 'Click here'
   },
   theme: {
     changeThemeTitle: 'Make it easier on your eyes',
@@ -32,10 +33,10 @@ export default {
   git: {
     total_commits: 'Commits since last year',
     issue_count: 'Issues closed',
-    latest_star: 'Is the latest starred repository'
+    latest_star: 'Is the latest starred repository ⭐️'
   },
   spotify_user: {
     go_to_profile: 'Go to Spotify profile',
-    followers: 'Number of followers, yay!'
+    followers: 'Number of followers, yay! 🎉'
   }
 };

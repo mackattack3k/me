@@ -6,12 +6,13 @@ export default {
     settings: 'inställningar'
   },
   home: {
-    title1: 'Marcus är bäst',
+    title1: 'Marcus är bäst 👨‍💻',
     section1: 'Marcus är grym och han kan koda bra. Alltså väldigt bra',
     title2: 'git bra',
     section2: 'När du kan git lika bra som Marcus är allting möjligt',
-    title3: 'Jag vill spela ett spel',
-    section3: 'Vill du se lite cool data? Klick här'
+    title3: 'Kool data 😎',
+    section3: 'Vill du se lite realtidsdata?',
+    click_here: 'Klicka här'
   },
   theme: {
     changeThemeTitle: 'Byt färg här kompis',
@@ -31,10 +32,10 @@ export default {
   git: {
     total_commits: 'Commits sedan förra året',
     issue_count: 'Stängda issues',
-    latest_star: 'Senaste stjärnmarkerade repot'
+    latest_star: 'Senaste stjärnmarkerade repot ⭐️'
   },
   spotify_user: {
     go_to_profile: 'Öppna Spotify profil',
-    followers: 'Antal följare, tjoho!'
+    followers: 'Antal följare, tjoho! 🎉'
   }
 };
