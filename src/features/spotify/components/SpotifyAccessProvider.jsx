@@ -36,6 +36,7 @@ const SpotifyAccessProvider = ({ children }) => {
     return diff > 0;
   };
   if (hasExpired()) {
+    // TODO: Should remove local storage not set it to undefined
     setAuthorization(undefined);
   }
   const { access: AUTHORIZATION } = authorization || {};
