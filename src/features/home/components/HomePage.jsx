@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import FakeAutoCode from './FakeAutoCode';
+import FakeAutoCode from '../../codepreview/components/FakeAutoCode';
 import HomeSection from './HomeSection';
 
 const HomePage = () => {
