@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import Lowlight from 'react-lowlight';
+import js from 'highlight.js/lib/languages/javascript';
+import 'highlight.js/styles/dark.css';
 
-SyntaxHighlighter.registerLanguage('javascript', js);
+Lowlight.registerLanguage('js', js);
 
-const JavascriptHighlighter = ({ children }) => (
-  <SyntaxHighlighter language="javascript" style={dark}>
-    {children}
-  </SyntaxHighlighter>
+const JavascriptHighlighter = ({ code }) => (
+  <Lowlight language="js" value={code} />
 );
 
 JavascriptHighlighter.propTypes = {
-  children: PropTypes.node.isRequired
+  code: PropTypes.string.isRequired
 };
 
 export default JavascriptHighlighter;

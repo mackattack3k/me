@@ -19,6 +19,7 @@
     "flow-bin": "^0.107.0",
     "graphql": "^14.5.4",
     "graphql-anywhere": "^4.2.4",
+    "highlight.js": "^9.15.10",
     "husky": "^3.0.5",
     "i18next": "^17.0.13",
     "i18next-browser-languagedetector": "^3.0.3",
@@ -29,9 +30,9 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-i18next": "^10.12.2",
+    "react-lowlight": "^2.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
-    "react-syntax-highlighter": "^11.0.2",
     "source-map-explorer": "^2.0.1",
     "styled-components": "^4.3.2"
   },

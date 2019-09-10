@@ -64,7 +64,7 @@ const FakeAutoCode = () => {
   );
   return (
     <Code>
-      <JavascriptHighlighter>{fakeCode}</JavascriptHighlighter>
+      <JavascriptHighlighter code={fakeCode} />
       <Loading>{isLoadingApi && <LoadingSpinner />}</Loading>
     </Code>
   );
