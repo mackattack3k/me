@@ -1,4 +1,8 @@
 # A site about me
+![Docker image](https://github.com/mackattack3k/me/workflows/Dockerhub/badge.svg)
+![Node install and build](https://github.com/mackattack3k/me/workflows/Node%20install,%20build,%20test/badge.svg)
+
+
 
 TLDR; Go to [marcus.hansson.dev](https://marcus.hansson.dev)
 
