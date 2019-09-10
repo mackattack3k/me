@@ -8,11 +8,12 @@ export default {
   home: {
     title1: 'Marcus is the best 👨‍💻',
     section1:
-      'Marcus is amazing and knows how to code good very good. Like very good.',
+      'Marcus is amazing and knows how to code good. Like very good.\nJust look at him' +
+      ' go!\n\nWow, such good.',
     title2: '💻 git gud',
     section2: 'When you know git as well as Marcus. Nothing is impossible.',
     title3: 'Cool data 😎',
-    section3: 'Do you want to see som real time stats?',
+    section3: 'Do you want to see som real time stats instead?',
     click_here: 'Click here'
   },
   theme: {

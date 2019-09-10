@@ -26,7 +26,11 @@ function reducer(state, action) {
 }
 
 const Code = styled.div`
+  width: 100%;
   max-width: 475px;
+  @media (max-width: 900px) {
+    font-size: 80%;
+  }
 `;
 const Loading = styled.div`
   padding-top: 15px;

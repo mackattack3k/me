@@ -7,11 +7,13 @@ export default {
   },
   home: {
     title1: 'Marcus är bäst 👨‍💻',
-    section1: 'Marcus är grym och han kan koda bra. Alltså väldigt bra',
-    title2: 'git bra',
+    section1:
+      'Marcus är grym och kan koda bra. Alltså väldigt bra. Titta bara hur han' +
+      ' hackar iväg!\n\nWow vad häftigt',
+    title2: '💻 git bra',
     section2: 'När du kan git lika bra som Marcus är allting möjligt',
     title3: 'Kool data 😎',
-    section3: 'Vill du se lite realtidsdata?',
+    section3: 'Vill du se lite riktig data istället?',
     click_here: 'Klicka här'
   },
   theme: {
