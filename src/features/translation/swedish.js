@@ -11,7 +11,9 @@ export default {
       'Marcus är grym och kan koda bra. Alltså väldigt bra.\nTitta bara hur han' +
       ' hackar iväg!\n\nWow vad häftigt',
     title2: '💻 git bra',
-    section2: 'När du kan git lika bra som Marcus är allting möjligt',
+    section2:
+      'När du kan git lika bra som Marcus är allting möjligt. Kolla in det här häftiga' +
+      ' kommandot.',
     title3: 'Kool data 😎',
     section3: 'Vill du se lite riktig data istället?',
     click_here: 'Klicka här'
