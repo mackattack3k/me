@@ -33,7 +33,7 @@ export default {
   },
   git: {
     total_commits: 'Commits since last year',
-    issue_count: 'Issues closed',
+    issue_count: 'Issues closed ⛔️',
     latest_star: 'Is the latest starred repository ⭐️'
   },
   spotify_user: {

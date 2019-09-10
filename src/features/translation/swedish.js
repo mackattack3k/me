@@ -33,7 +33,7 @@ export default {
   },
   git: {
     total_commits: 'Commits sedan förra året',
-    issue_count: 'Stängda issues',
+    issue_count: 'Stängda issues ⛔️',
     latest_star: 'Senaste stjärnmarkerade repot ⭐️'
   },
   spotify_user: {
