@@ -21,6 +21,7 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 450px;
   padding: 20px;
   @media (max-width: 900px) {
     padding: 5px 0;
