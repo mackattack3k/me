@@ -15,7 +15,7 @@ const Section = styled.div`
 const TitleSection = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 450px;
 `;
 const Content = styled.div`
   display: flex;
