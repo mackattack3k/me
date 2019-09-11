@@ -3,13 +3,13 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import wait from 'waait';
 import AllMockProviders from '../../../testproviders/AllMockProviders';
+import SpotifyUser from '../components/SpotifyUser';
 import english from '../../translation/english';
-import Contributions from '../components/Contributions';
 
 const mountMockedProvider = async () => {
   const component = render(
     <AllMockProviders>
-      <Contributions />
+      <SpotifyUser />
     </AllMockProviders>
   );
 
@@ -20,7 +20,7 @@ const errorMockProvider = async () => {
   const component = render(
     <AllMockProviders>
       <MockedProvider mocks={undefined}>
-        <Contributions />
+        <SpotifyUser />
       </MockedProvider>
     </AllMockProviders>
   );
@@ -28,15 +28,10 @@ const errorMockProvider = async () => {
   return component;
 };
 
-describe('contributions', () => {
+describe('spotify user statistics', () => {
   it('should render with snapshot', async () => {
-    const contributions = await mountMockedProvider();
-    expect(contributions).toMatchSnapshot();
-  });
-  it('should number of commits', async () => {
-    const { getByText } = await mountMockedProvider();
-    const commits = getByText(/Commits/g);
-    expect(commits).toBeDefined();
+    const spotifyUser = await mountMockedProvider();
+    expect(spotifyUser).toMatchSnapshot();
   });
   it('should show error on data failure', async () => {
     const { getByText } = await errorMockProvider();

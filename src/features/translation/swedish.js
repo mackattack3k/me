@@ -41,5 +41,8 @@ export default {
   spotify_user: {
     go_to_profile: 'Öppna Spotify profil',
     followers: 'Antal följare, tjoho! 🎉'
+  },
+  error: {
+    unknown: 'Något gick fel, försök gärna igen 😭'
   }
 };

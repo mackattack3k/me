@@ -41,5 +41,8 @@ export default {
   spotify_user: {
     go_to_profile: 'Go to Spotify profile',
     followers: 'Number of followers, yay! 🎉'
+  },
+  error: {
+    unknown: 'Something went wrong, please try again 😭'
   }
 };
