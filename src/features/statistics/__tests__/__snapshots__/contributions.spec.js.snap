@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contributions should render with snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffca28;
+}
+
+.c4:hover {
+  color: #c79a00;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #252525;
+  min-height: 100px;
+  min-width: 140px;
+  max-width: 400px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-radius: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05),0 1px 2px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  margin: 8px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  font-size: 28px;
+  color: #ffca28;
+}
+
+.c3 {
+  font-size: 14px;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+<body>
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            5
+          </div>
+          <div
+            class="c3"
+          >
+            Commits since last year
+          </div>
+        </div>
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            5
+          </div>
+          <div
+            class="c3"
+          >
+            Issues closed ⛔️
+          </div>
+        </div>
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <a
+              class="c4"
+              href="http://test.com"
+              target="_blank"
+            >
+              Hello World
+            </a>
+            <span>
+              /
+            </span>
+            <a
+              class="c4"
+              href="http://test.com"
+              target="_blank"
+            >
+              Hello World
+            </a>
+          </div>
+          <div
+            class="c3"
+          >
+            Is the latest starred repository ⭐️
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-EHOje fdBzlF"
+    >
+      <div
+        class="sc-bwzfXH ftubxy"
+      >
+        <div
+          class="sc-bxivhb iiZSpa"
+        >
+          5
+        </div>
+        <div
+          class="sc-ifAKCX fsYueS"
+        >
+          Commits since last year
+        </div>
+      </div>
+      <div
+        class="sc-bwzfXH ftubxy"
+      >
+        <div
+          class="sc-bxivhb iiZSpa"
+        >
+          5
+        </div>
+        <div
+          class="sc-ifAKCX fsYueS"
+        >
+          Issues closed ⛔️
+        </div>
+      </div>
+      <div
+        class="sc-bwzfXH ftubxy"
+      >
+        <div
+          class="sc-bxivhb iiZSpa"
+        >
+          <a
+            class="sc-bdVaJa oizeT"
+            href="http://test.com"
+            target="_blank"
+          >
+            Hello World
+          </a>
+          <span>
+            /
+          </span>
+          <a
+            class="sc-bdVaJa oizeT"
+            href="http://test.com"
+            target="_blank"
+          >
+            Hello World
+          </a>
+        </div>
+        <div
+          class="sc-ifAKCX fsYueS"
+        >
+          Is the latest starred repository ⭐️
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
