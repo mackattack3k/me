@@ -15,13 +15,13 @@ const Section = styled.div`
 const TitleSection = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 450px;
+  max-width: 500px;
 `;
 const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 450px;
+  max-width: 500px;
   padding: 20px;
   @media (max-width: 900px) {
     padding: 5px 0;
