@@ -5,6 +5,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import deepGet from '../../deepGet';
+import ErrorPage from '../../error/components/ErrorPage';
 import ExternalLink from '../../navigation/components/ExternalLink';
 import { SPOTIFY_USER } from '../statisticsQueries';
 import StatisticsCard from './StatisticsCard';
@@ -38,7 +39,7 @@ const SpotifyUser = () => {
   const { t } = useTranslation();
   const { loading, error, data } = useQuery(SPOTIFY_USER);
   if (error) {
-    return <>Spotify error :(</>;
+    return <ErrorPage />;
   }
   const { display_name: name, external_urls: urls, followers, id } =
     deepGet(data, ['user']) || {};

@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import deepGet from '../../deepGet';
+import ErrorPage from '../../error/components/ErrorPage';
 import ExternalLink from '../../navigation/components/ExternalLink';
 import { GITHUB_CONTRIBUTIONS } from '../statisticsQueries';
 import StatisticsCard from './StatisticsCard';
@@ -23,7 +24,9 @@ const NO_HITS = 0;
 const Contributions = () => {
   const { t } = useTranslation();
   const { loading, error, data } = useQuery(GITHUB_CONTRIBUTIONS);
-  if (error) return <p>Error :(</p>;
+  if (error) {
+    return <ErrorPage />;
+  }
   const totalCommitContributions =
     deepGet(data, [
       'user',
