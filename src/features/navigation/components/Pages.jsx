@@ -1,16 +1,21 @@
 import { Router } from '@reach/router';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
-import ContactPage from '../../contact/components/ContactPage';
 import { CONTACT_PAGE } from '../../contact/contactRoutes';
-import HomePage from '../../home/components/HomePage';
 import { HOME_PAGE } from '../../home/homeRoutes';
-import SettingsPage from '../../settings/components/SettingsPage';
+import LoadingSpinner from '../../loading/components/LoadingSpinner';
 import SpotifyAuthorize from '../../spotify/components/SpotifyAuthorize';
 import { AUTHORIZE_SPOTIFY } from '../../spotify/spotifyRoutes';
-import StatisticsPage from '../../statistics/components/StatisticsPage';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
 import { SETTINGS_PAGE } from '../../settings/settingsRoutes';
+const StatisticsPage = lazy(() =>
+  import('../../statistics/components/StatisticsPage')
+);
+const SettingsPage = lazy(() =>
+  import('../../settings/components/SettingsPage')
+);
+const ContactPage = lazy(() => import('../../contact/components/ContactPage'));
+const HomePage = lazy(() => import('../../home/components/HomePage'));
 
 const Page = styled.div`
   border-top-left-radius: 40px;
@@ -29,13 +34,15 @@ const Page = styled.div`
 
 const Pages = () => (
   <Page>
-    <Router style={{ width: '100%' }}>
-      <HomePage path={HOME_PAGE} />
-      <StatisticsPage path={STATISTICS_PAGE} />
-      <ContactPage path={CONTACT_PAGE} />
-      <SettingsPage path={SETTINGS_PAGE} />
-      <SpotifyAuthorize path={AUTHORIZE_SPOTIFY} />
-    </Router>
+    <Suspense fallback={<LoadingSpinner />}>
+      <Router style={{ width: '100%' }}>
+        <HomePage path={HOME_PAGE} />
+        <StatisticsPage path={STATISTICS_PAGE} />
+        <ContactPage path={CONTACT_PAGE} />
+        <SettingsPage path={SETTINGS_PAGE} />
+        <SpotifyAuthorize path={AUTHORIZE_SPOTIFY} />
+      </Router>
+    </Suspense>
   </Page>
 );
 
