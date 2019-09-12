@@ -29,16 +29,6 @@ const SpotifyAccessProvider = ({ children }) => {
       expiresAt
     });
   };
-  const hasExpired = () => {
-    const { expiresAt } = authorization || {};
-    const now = new Date();
-    const diff = now - new Date(expiresAt);
-    return diff > 0;
-  };
-  if (hasExpired()) {
-    // TODO: Should remove local storage not set it to undefined
-    setAuthorization(undefined);
-  }
   const { access: AUTHORIZATION } = authorization || {};
   return (
     <SpotifyAccessContext.Provider
