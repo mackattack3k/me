@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import H1 from '../../text/components/H1';
 
 const Section = styled.div`
-  height: 350px;
+  height: 420px;
   display: flex;
   flex-direction: row;
   white-space: pre-line;
