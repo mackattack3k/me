@@ -42,7 +42,10 @@ const HomeSection = ({ title, subTitle, children }) => (
 HomeSection.propTypes = {
   title: PropTypes.node.isRequired,
   subTitle: PropTypes.node.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
+};
+HomeSection.defaultProps = {
+  children: <></>
 };
 
 export default HomeSection;
