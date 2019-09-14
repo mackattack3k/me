@@ -19,7 +19,9 @@ const AuthorizeButton = styled.div`
 
 const SpotifyStatistics = () => {
   const { t } = useTranslation();
-  const { AUTHORIZATION, authorize } = useContext(SpotifyAccessContext);
+  const { AUTHORIZATION, authorize, hasExpired } = useContext(
+    SpotifyAccessContext
+  );
   const restLink = new RestLink({
     uri: 'https://api.spotify.com/v1/',
     headers: {
@@ -30,17 +32,18 @@ const SpotifyStatistics = () => {
     link: restLink,
     cache: new InMemoryCache()
   });
+  const canUseData = AUTHORIZATION && !hasExpired;
   return (
     <ApolloProvider client={spotifyClient}>
       <H1>
         Spotify <FontAwesomeIcon icon={faSpotify} />
       </H1>
       <StatisticsPageContent>
-        {AUTHORIZATION
+        {canUseData
           ? t('statistics.spotify')
           : t('statistics.spotify_logged_out')}
-        {AUTHORIZATION && <SpotifyUser />}
-        {!AUTHORIZATION && (
+        {canUseData && <SpotifyUser />}
+        {!canUseData && (
           <AuthorizeButton>
             <Button onClick={authorize}>
               {t('statistics.log_in_spotify')}

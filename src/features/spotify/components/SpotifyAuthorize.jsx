@@ -9,7 +9,7 @@ import { SpotifyAccessContext } from './SpotifyAccessProvider';
 const SpotifyAuthorize = ({ location }) => {
   const [isSavingToken, setIsSaving] = useState(true);
   const { hash } = location;
-  const { persistAuthorization, AUTHORIZATION } = useContext(
+  const { persistAuthorization, AUTHORIZATION, hasExpired } = useContext(
     SpotifyAccessContext
   );
   const {
@@ -21,7 +21,7 @@ const SpotifyAuthorize = ({ location }) => {
   const formattedToken = { bearer, token, expiresIn };
   // Set authenticated token or show loading
   useEffect(() => {
-    if (!AUTHORIZATION) {
+    if (!AUTHORIZATION || hasExpired) {
       persistAuthorization(formattedToken);
     } else {
       setIsSaving(false);

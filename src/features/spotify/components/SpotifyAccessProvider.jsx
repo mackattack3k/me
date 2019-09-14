@@ -29,13 +29,20 @@ const SpotifyAccessProvider = ({ children }) => {
       expiresAt
     });
   };
+  const hasExpired = () => {
+    const { expiresAt } = authorization || {};
+    const now = new Date();
+    const diff = now - new Date(expiresAt);
+    return diff > 0;
+  };
   const { access: AUTHORIZATION } = authorization || {};
   return (
     <SpotifyAccessContext.Provider
       value={{
         AUTHORIZATION,
         persistAuthorization,
-        authorize
+        authorize,
+        hasExpired: hasExpired()
       }}
     >
       {children}
