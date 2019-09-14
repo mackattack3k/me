@@ -20,7 +20,7 @@ You can get your github token [here](https://help.github.com/en/articles/creatin
 ### Using docker
 The easiest way to run this project is by using docker
 ```shell script
-docker run -v your_config.js:/app/me/config.js -p HOST_PORT:80 mackattack3k/me:stable
+docker run -v your_config.js:/me/config.js -p HOST_PORT:80 mackattack3k/me:stable
 ```
 
 ### Using node
