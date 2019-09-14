@@ -25,8 +25,7 @@ export default {
     changeLanguage: 'Yes!'
   },
   statistics: {
-    github:
-      'Undrar du var Marcus håller på med på github? Kolla in sammanfattningen nedan!',
+    github: 'Undrar du var Marcus håller på med på github? Kolla in det nedan!',
     spotify: 'Kolla in den här häftiga Spotify datan',
     spotify_logged_out:
       'För att se andras data i Spotify så måste du logga in först. Du kommer att vara inloggad' +

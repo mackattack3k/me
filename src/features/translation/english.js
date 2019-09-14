@@ -25,8 +25,7 @@ export default {
     changeLanguage: 'Ja!'
   },
   statistics: {
-    github:
-      'Wondering what Marcus has been up to on github? Check out this compact view!',
+    github: 'Wondering what Marcus has been up to on github? Check this out!',
     spotify: 'Check out this rad Spotify data',
     spotify_logged_out:
       'To view others spotify data you have to log in to your account first. You will be logged' +
