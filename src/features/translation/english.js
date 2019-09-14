@@ -42,6 +42,7 @@ export default {
     followers: 'Number of followers, yay! 🎉'
   },
   error: {
-    unknown: 'Something went wrong, please try again 😭'
+    unknown: 'Something went wrong, please try again 😭',
+    no_spotify_id: 'No CLIENT_ID for Spotify API'
   }
 };

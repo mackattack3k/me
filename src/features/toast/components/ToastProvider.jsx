@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import Toast from './Toast';
 import toastReducer, { ADD_TOAST, REMOVE_TOAST } from './toastReducer';
@@ -15,8 +16,10 @@ const Toasts = styled.div`
   left: 0;
 `;
 const ToastProvider = ({ children }) => {
+  const { t } = useTranslation();
   const [{ toasts }, dispatch] = useReducer(toastReducer, INITIAL_STATE);
-  const addToast = message => {
+  const addToast = translationKey => {
+    const message = t([translationKey, 'error.unknown']);
     dispatch({
       type: ADD_TOAST,
       message
