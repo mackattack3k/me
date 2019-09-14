@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+const isUndefined = value =>
+  typeof value === 'undefined' || value === 'undefined';
+
 function useLocalStorage(key, initialValue) {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
@@ -8,7 +11,7 @@ function useLocalStorage(key, initialValue) {
       // Get from local storage by key
       const item = window.localStorage.getItem(key);
       // Parse stored json or if none return initialValue
-      if (!item || item === 'undefined') {
+      if (isUndefined(item)) {
         return initialValue;
       }
       return item ? JSON.parse(item) : initialValue;
@@ -26,7 +29,7 @@ function useLocalStorage(key, initialValue) {
       // Allow value to be a function so we have same API as useState
       const valueToStore =
         value instanceof Function ? value(storedValue) : value;
-      if (!valueToStore) {
+      if (isUndefined(valueToStore)) {
         // Remove item from local storage
         window.localStorage.removeItem(key);
         setStoredValue(valueToStore);

@@ -1,7 +1,11 @@
 import useLocalStorage from '../useLocalStorage';
 import useMedia from './useMedia';
 
-function useTheme() {
+// Read the recipe for useMedia to learn more: usehooks.com/useMedia
+const usePrefersDarkMode = () =>
+  useMedia(['(prefers-color-scheme: dark)'], [true], false);
+
+const useTheme = () => {
   // Use our useLocalStorage hook to persist state through a page refresh.
   // Read the recipe for this hook to learn more: usehooks.com/useLocalStorage
   const [enabledState, setEnabledState] = useLocalStorage('dark-mode-enabled');
@@ -17,10 +21,6 @@ function useTheme() {
 
   // Return enabled state and setter
   return [enabled, setEnabledState];
-}
-// Read the recipe for useMedia to learn more: usehooks.com/useMedia
-function usePrefersDarkMode() {
-  return useMedia(['(prefers-color-scheme: dark)'], [true], false);
-}
+};
 
 export default useTheme;
