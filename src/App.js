@@ -6,6 +6,7 @@ import Pages from './features/navigation/components/Pages';
 import NavigationBar from './features/navigation/components/NavigationBar';
 import { SpotifyAccessProvider } from './features/spotify/components/SpotifyAccessProvider';
 import { ThemeSelectorProvider } from './features/theme/components/ThemeSelectorProvider';
+import { ToastProvider } from './features/toast/components/ToastProvider';
 
 setupLanguage();
 
@@ -18,12 +19,14 @@ const Background = styled.div`
 const App = () => {
   return (
     <ThemeSelectorProvider>
-      <SpotifyAccessProvider>
-        <Background className="app">
-          <NavigationBar />
-          <Pages />
-        </Background>
-      </SpotifyAccessProvider>
+      <ToastProvider>
+        <SpotifyAccessProvider>
+          <Background className="app">
+            <NavigationBar />
+            <Pages />
+          </Background>
+        </SpotifyAccessProvider>
+      </ToastProvider>
     </ThemeSelectorProvider>
   );
 };
