@@ -26,7 +26,13 @@ const SpotifyAuthorize = ({ location }) => {
     } else {
       setIsSaving(false);
     }
-  }, [AUTHORIZATION, persistAuthorization, setIsSaving, formattedToken]);
+  }, [
+    AUTHORIZATION,
+    persistAuthorization,
+    setIsSaving,
+    formattedToken,
+    hasExpired
+  ]);
   if (!hash) {
     return <Redirect to={HOME_PAGE} noThrow />;
   }
