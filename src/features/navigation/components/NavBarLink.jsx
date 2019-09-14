@@ -1,9 +1,9 @@
 import { Link } from '@reach/router';
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+
 import { ThemeContext } from 'styled-components';
 
-const NavLink = props => {
+const NavBarLink = props => {
   const theme = useContext(ThemeContext);
   return (
     <Link
@@ -20,6 +20,6 @@ const NavLink = props => {
   );
 };
 
-NavLink.propTypes = {};
+NavBarLink.propTypes = {};
 
-export default NavLink;
+export default NavBarLink;

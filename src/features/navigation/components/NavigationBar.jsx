@@ -12,7 +12,7 @@ import { HOME_PAGE } from '../../home/homeRoutes';
 import ProfileBadge from '../../profile/components/ProfileBadge';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
 import { SETTINGS_PAGE } from '../../settings/settingsRoutes';
-import NavigationItem from './NavigationItem';
+import NavBarItem from './NavBarItem';
 
 const Background = styled.div`
   background: ${props =>
@@ -33,27 +33,27 @@ const Nav = styled.div`
   margin-top: 20px;
 `;
 
-const PageNavigation = () => {
+const NavigationBar = () => {
   const { t } = useTranslation();
   return (
     <Background>
       <ProfileBadge />
       <Nav>
-        <NavigationItem to={HOME_PAGE} icon={faUser}>
+        <NavBarItem to={HOME_PAGE} icon={faUser}>
           {t('routes.home')}
-        </NavigationItem>
-        <NavigationItem to={STATISTICS_PAGE} icon={faGlasses}>
+        </NavBarItem>
+        <NavBarItem to={STATISTICS_PAGE} icon={faGlasses}>
           {t('routes.statistics')}
-        </NavigationItem>
-        <NavigationItem to={SETTINGS_PAGE} icon={faCog}>
+        </NavBarItem>
+        <NavBarItem to={SETTINGS_PAGE} icon={faCog}>
           {t('routes.settings')}
-        </NavigationItem>
-        <NavigationItem to={CONTACT_PAGE} icon={faEnvelope}>
+        </NavBarItem>
+        <NavBarItem to={CONTACT_PAGE} icon={faEnvelope}>
           {t('routes.contact')}
-        </NavigationItem>
+        </NavBarItem>
       </Nav>
     </Background>
   );
 };
 
-export default PageNavigation;
+export default NavigationBar;

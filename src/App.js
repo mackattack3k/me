@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import { setupLanguage } from './features/language/initLanguage';
 import Pages from './features/navigation/components/Pages';
-import PageNavigation from './features/navigation/components/PageNavigation';
+import NavigationBar from './features/navigation/components/NavigationBar';
 import { SpotifyAccessProvider } from './features/spotify/components/SpotifyAccessProvider';
 import { ThemeSelectorProvider } from './features/theme/components/ThemeSelectorProvider';
 
@@ -20,7 +20,7 @@ const App = () => {
     <ThemeSelectorProvider>
       <SpotifyAccessProvider>
         <Background className="app">
-          <PageNavigation />
+          <NavigationBar />
           <Pages />
         </Background>
       </SpotifyAccessProvider>

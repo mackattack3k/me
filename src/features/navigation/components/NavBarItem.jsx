@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import React from 'react';
-import NavLink from './NavLink';
+import PropTypes from 'prop-types';
+import NavBarLink from './NavBarLink';
 
 const Navigation = styled.div`
   display: flex;
@@ -25,13 +26,19 @@ const LinkText = styled.div`
   }
 `;
 
-const NavigationItem = ({ to, icon, children }) => (
-  <NavLink to={to}>
+const NavBarItem = ({ to, icon, children }) => (
+  <NavBarLink to={to}>
     <Navigation>
       <FontAwesomeIcon icon={icon} />
       <LinkText>{children}</LinkText>
     </Navigation>
-  </NavLink>
+  </NavBarLink>
 );
 
-export default NavigationItem;
+NavBarItem.propTypes = {
+  to: PropTypes.string.isRequired,
+  icon: PropTypes.shape().isRequired,
+  children: PropTypes.node.isRequired
+};
+
+export default NavBarItem;
