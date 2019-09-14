@@ -42,6 +42,7 @@ export default {
     followers: 'Antal följare, tjoho! 🎉'
   },
   error: {
-    unknown: 'Något gick fel, försök gärna igen 😭'
+    unknown: 'Något gick fel, försök gärna igen 😭',
+    no_spotify_id: 'Inget CLIENT_ID definerat för Spotify API'
   }
 };

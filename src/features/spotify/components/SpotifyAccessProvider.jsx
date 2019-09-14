@@ -1,5 +1,6 @@
-import React, { createContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { ToastContext } from '../../toast/components/ToastProvider';
 import useLocalStorage from '../../useLocalStorage';
 import { AUTHORIZE_SPOTIFY } from '../spotifyRoutes';
 
@@ -7,11 +8,11 @@ const SpotifyAccessContext = createContext(null);
 
 const SpotifyAccessProvider = ({ children }) => {
   const [authorization, setAuthorization] = useLocalStorage('spotify');
+  const { addToast } = useContext(ToastContext);
   const authorize = () => {
-    const CLIENT_ID = window.ENV.SPOTIFY_CLIENT_ID;
+    const { SPOTIFY_CLIENT_ID: CLIENT_ID } = window.ENV;
     if (!CLIENT_ID) {
-      // eslint-disable-next-line no-console
-      console.log('No client id, show error', { CLIENT_ID });
+      addToast('error.asdasd');
       return;
     }
     const { host, href, protocol } = window.location;
