@@ -27,6 +27,8 @@ const Page = styled.div`
   flex: 1;
   padding: 40px;
   overflow-y: auto;
+  box-shadow: -5px 0 10px -5px rgba(50, 50, 50, 0.3),
+    0px -5px 10px -5px rgba(50, 50, 50, 0.3);
   @media (max-width: 900px) {
     padding: 20px 10px;
   }
