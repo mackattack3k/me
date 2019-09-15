@@ -14,6 +14,10 @@ module.exports = {
   "rules": {
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "controlComponents": ["Field"],
+      "depth": 3,
+    }],
     "max-len": [
       "warn",
       {

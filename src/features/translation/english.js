@@ -47,9 +47,14 @@ export default {
   },
   contact: {
     title: 'Talk some more',
+    subtitle:
+      'Do you want to get in contact with me? Fill out this contact form and I will get' +
+      ' back to you.',
     submit: 'Send',
     required: 'Required',
     invalid_email: 'Inalid email address',
-    success_message: 'Email sent! (Not really since I dont want spam)'
+    success_message: 'Email sent! (Not really since I dont want spam)',
+    email_label: 'Your email',
+    message_label: 'Message'
   }
 };
