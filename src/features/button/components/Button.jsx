@@ -13,22 +13,28 @@ const PrimaryButton = styled.button`
   color: #3e3e3e;
   background: ${props => props.theme.secondary.main};
   cursor: pointer;
+  :disabled {
+    opacity: 0.6;
+  }
 `;
 
-const Button = ({ onClick, children, type }) => (
-  <PrimaryButton onClick={onClick} type={type}>
+const Button = ({ onClick, children, type, disabled }) => (
+  <PrimaryButton onClick={onClick} type={type} disabled={disabled}>
     {children}
   </PrimaryButton>
 );
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   children: PropTypes.node,
-  type: PropTypes.oneOf(['submit', 'button'])
+  type: PropTypes.oneOf(['submit', 'button']),
+  disabled: PropTypes.bool
 };
 Button.defaultProps = {
+  onClick: () => {},
   children: '',
-  type: 'button'
+  type: 'button',
+  disabled: false
 };
 
 export default Button;

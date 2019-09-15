@@ -44,5 +44,18 @@ export default {
   error: {
     unknown: 'Something went wrong, please try again 😭',
     no_spotify_id: 'No CLIENT_ID for Spotify API'
+  },
+  contact: {
+    title: 'Talk some more',
+    subtitle:
+      'Do you want to get in contact with me? Fill out this contact form and I will get' +
+      ' back to you.',
+    submit: 'Send',
+    required: 'Required',
+    invalid_email: 'Invalid email address',
+    success_message: 'Email sent! (Not really since I dont want spam)',
+    email_label: 'Your email',
+    message_label: 'Message',
+    name_label: 'Full name '
   }
 };

@@ -44,5 +44,19 @@ export default {
   error: {
     unknown: 'Något gick fel, försök gärna igen 😭',
     no_spotify_id: 'Inget CLIENT_ID definerat för Spotify API'
+  },
+  contact: {
+    title: 'Snacka vidare',
+    subtitle:
+      'Vill du komma i kontakt med mig? Fyll i formuläret nedan så återkopplar jag' +
+      ' snarast.',
+    submit: 'Skicka',
+    required: 'Obligatorisk',
+    invalid_email: 'Ogilltig e-postadress',
+    success_message:
+      'Email skickat! (Fast inte på riktigt eftersom att jag inte vill ha spam)',
+    email_label: 'Din e-post',
+    message_label: 'Meddelande',
+    name_label: 'Ditt namn'
   }
 };

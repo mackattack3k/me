@@ -3,7 +3,13 @@
 exports[`contributions should render with snapshot 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .c4 {
+  "baseElement": .c5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.c4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #ffca28;
@@ -165,48 +171,51 @@ Object {
           </div>
         </div>
       </div>
+      <div
+        class="c5"
+      />
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-EHOje fdBzlF"
+      class="sc-gzVnrw dtKQxx"
     >
       <div
-        class="sc-bwzfXH ftubxy"
+        class="sc-bxivhb bVdJga"
       >
         <div
-          class="sc-bxivhb iiZSpa"
+          class="sc-EHOje hTYuRo"
         >
           5
         </div>
         <div
-          class="sc-ifAKCX fsYueS"
+          class="sc-bZQynM bmiwFs"
         >
           Commits since last year
         </div>
       </div>
       <div
-        class="sc-bwzfXH ftubxy"
+        class="sc-bxivhb bVdJga"
       >
         <div
-          class="sc-bxivhb iiZSpa"
+          class="sc-EHOje hTYuRo"
         >
           5
         </div>
         <div
-          class="sc-ifAKCX fsYueS"
+          class="sc-bZQynM bmiwFs"
         >
           Issues closed ⛔️
         </div>
       </div>
       <div
-        class="sc-bwzfXH ftubxy"
+        class="sc-bxivhb bVdJga"
       >
         <div
-          class="sc-bxivhb iiZSpa"
+          class="sc-EHOje hTYuRo"
         >
           <a
-            class="sc-bdVaJa oizeT"
+            class="sc-htpNat jsBWPD"
             href="http://test.com"
             target="_blank"
           >
@@ -216,7 +225,7 @@ Object {
             /
           </span>
           <a
-            class="sc-bdVaJa oizeT"
+            class="sc-htpNat jsBWPD"
             href="http://test.com"
             target="_blank"
           >
@@ -224,12 +233,15 @@ Object {
           </a>
         </div>
         <div
-          class="sc-ifAKCX fsYueS"
+          class="sc-bZQynM bmiwFs"
         >
           Is the latest starred repository ⭐️
         </div>
       </div>
     </div>
+    <div
+      class="sc-bwzfXH ftCJGa"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
