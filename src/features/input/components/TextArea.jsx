@@ -11,8 +11,15 @@ const Input = styled.textarea`
   box-sizing: border-box;
   min-height: 125px;
 `;
-const TextArea = ({ field: { name, value, onChange, onBlur } }) => (
-  <Input name={name} onChange={onChange} value={value} onBlur={onBlur} />
+const TextArea = ({ field: { name, value, onChange, onBlur }, ...props }) => (
+  <Input
+    name={name}
+    onChange={onChange}
+    value={value}
+    onBlur={onBlur}
+    /* eslint-disable-next-line react/jsx-props-no-spreading */
+    {...props}
+  />
 );
 
 TextArea.propTypes = {

@@ -11,13 +11,19 @@ const Input = styled.input`
   box-sizing: border-box;
 `;
 
-const TextInput = ({ field: { name, value, onChange, onBlur } }, type) => (
+const TextInput = ({
+  field: { name, value, onChange, onBlur },
+  type,
+  ...props
+}) => (
   <Input
     name={name}
     onChange={onChange}
     value={value}
     onBlur={onBlur}
     type={type}
+    /* eslint-disable-next-line react/jsx-props-no-spreading */
+    {...props}
   />
 );
 
@@ -27,7 +33,11 @@ TextInput.propTypes = {
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired
-  }).isRequired
+  }).isRequired,
+  type: PropTypes.string
+};
+TextInput.defaultProps = {
+  type: 'input'
 };
 
 export default TextInput;
