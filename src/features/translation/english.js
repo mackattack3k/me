@@ -52,9 +52,10 @@ export default {
       ' back to you.',
     submit: 'Send',
     required: 'Required',
-    invalid_email: 'Inalid email address',
+    invalid_email: 'Invalid email address',
     success_message: 'Email sent! (Not really since I dont want spam)',
     email_label: 'Your email',
-    message_label: 'Message'
+    message_label: 'Message',
+    name_label: 'Full name '
   }
 };

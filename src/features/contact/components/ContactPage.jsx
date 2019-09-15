@@ -3,14 +3,22 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import Button from '../../button/components/Button';
+import TextArea from '../../input/components/TextArea';
+import TextInput from '../../input/components/TextInput';
 import H1 from '../../text/components/H1';
 import { ToastContext } from '../../toast/components/ToastProvider';
 
 const Subtitle = styled.div`
-  margin: 10px 0;
+  margin: 15px 0;
 `;
 const InputSection = styled.div`
-  margin: 10px 0;
+  margin: 15px 0;
+`;
+const InputLabel = styled.div`
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 4px 0;
 `;
 
 const ContactPage = () => {
@@ -21,7 +29,7 @@ const ContactPage = () => {
       <H1>{t('contact.title')}</H1>
       <Subtitle>{t('contact.subtitle')}</Subtitle>
       <Formik
-        initialValues={{ email: '', message: '' }}
+        initialValues={{ email: '', message: '', name: '' }}
         validate={values => {
           const errors = {};
           if (!values.email) {
@@ -42,23 +50,39 @@ const ContactPage = () => {
         }}
       >
         {({ isSubmitting, isValid }) => (
-          <Form>
+          <Form style={{ maxWidth: '400px' }}>
             <InputSection>
-              <label htmlFor="contact-email">
-                <div>{t('contact.email_label')}</div>
+              <label>
+                <InputLabel>{t('contact.name_label')}</InputLabel>
                 <Field
+                  type="input"
+                  component={TextInput}
+                  name="name"
+                  aria-label="name"
+                />
+              </label>
+              <ErrorMessage name="name" component="div" />
+            </InputSection>
+            <InputSection>
+              <label>
+                <InputLabel>{t('contact.email_label')}</InputLabel>
+                <Field
+                  component={TextInput}
                   type="email"
                   name="email"
                   aria-label="sent-from-email"
-                  id="contact-email"
                 />
               </label>
               <ErrorMessage name="email" component="div" />
             </InputSection>
             <InputSection>
               <label>
-                <div>{t('contact.message_label')}</div>
-                <Field type="textarea" name="message" aria-label="message" />
+                <InputLabel>{t('contact.message_label')}</InputLabel>
+                <Field
+                  component={TextArea}
+                  name="message"
+                  aria-label="message"
+                />
               </label>
               <ErrorMessage name="message" component="div" />
             </InputSection>

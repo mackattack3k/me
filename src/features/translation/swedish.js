@@ -56,6 +56,7 @@ export default {
     success_message:
       'Email skickat! (Fast inte på riktigt eftersom att jag inte vill ha spam)',
     email_label: 'Din e-post',
-    message_label: 'Meddelande'
+    message_label: 'Meddelande',
+    name_label: 'Ditt namn'
   }
 };
