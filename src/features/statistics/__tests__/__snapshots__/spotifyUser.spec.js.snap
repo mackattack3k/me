@@ -3,17 +3,29 @@
 exports[`spotify user statistics should render with snapshot 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c0 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+<body>
     <div>
       <div>
         Something went wrong, please try again 😭
       </div>
+      <div
+        class="c0"
+      />
     </div>
   </body>,
   "container": <div>
     <div>
       Something went wrong, please try again 😭
     </div>
+    <div
+      class="sc-bwzfXH ftCJGa"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
