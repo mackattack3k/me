@@ -44,5 +44,12 @@ export default {
   error: {
     unknown: 'Something went wrong, please try again 😭',
     no_spotify_id: 'No CLIENT_ID for Spotify API'
+  },
+  contact: {
+    title: 'Talk some more',
+    submit: 'Send',
+    required: 'Required',
+    invalid_email: 'Inalid email address',
+    success_message: 'Email sent! (Not really since I dont want spam)'
   }
 };
