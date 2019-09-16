@@ -38,3 +38,11 @@ This is built using [Create-React-App](https://github.com/facebook/create-react-
 ```
 git clone git@github.com:mackattack3k/me.git && cd me && yarn install
 ```
+
+### Code style
+
+The code is following a `feature first` folder structure.
+
+We are also not using redux in favor of Reacts Context API for as long as possible.
+
+Prettier should also be used before committing and is therefor in a git hook per default
