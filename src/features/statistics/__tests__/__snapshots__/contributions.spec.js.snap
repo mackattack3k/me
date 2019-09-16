@@ -149,6 +149,7 @@ Object {
             <a
               class="c4"
               href="http://test.com"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Hello World
@@ -159,6 +160,7 @@ Object {
             <a
               class="c4"
               href="http://test.com"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Hello World
@@ -217,6 +219,7 @@ Object {
           <a
             class="sc-htpNat jsBWPD"
             href="http://test.com"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Hello World
@@ -227,6 +230,7 @@ Object {
           <a
             class="sc-htpNat jsBWPD"
             href="http://test.com"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Hello World
