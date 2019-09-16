@@ -1,6 +1,7 @@
 import React from 'react';
-import profileImage from '../../../images/Marcus.jpg';
 import styled from 'styled-components';
+import profileImage from '../../../images/Marcus.jpg';
+import profileImageWeb from '../../../images/Axakon_Marcus.webp';
 
 const Badge = styled.div`
   display: flex;
@@ -29,7 +30,11 @@ const ProfileText = styled.div`
 
 const ProfileBadge = () => (
   <Badge>
-    <Img src={profileImage} alt="Profile Marcus" />
+    <picture>
+      <source srcSet={profileImageWeb} type="image/webp" />
+      <source srcSet={profileImage} type="image/jpeg" />
+      <Img src={profileImage} alt="Profile Marcus" />
+    </picture>
     <ProfileText>mackattack3k</ProfileText>
   </Badge>
 );
