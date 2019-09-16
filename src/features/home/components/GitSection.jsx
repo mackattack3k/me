@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import git from '../../../images/git.png';
+import gitWeb from '../../../images/git.webp';
 
 const GitStyle = styled.div`
   padding: 20px 10px 20px 0;
@@ -14,7 +15,11 @@ const GitImage = styled.img`
 
 const GitSection = () => (
   <GitStyle>
-    <GitImage alt="Git screen shot" src={git} />
+    <picture>
+      <source srcSet={gitWeb} type="image/webp" />
+      <source srcSet={git} type="image/jpeg" />
+      <GitImage alt="Git screen shot" src={git} />
+    </picture>
   </GitStyle>
 );
 
