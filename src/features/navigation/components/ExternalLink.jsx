@@ -12,7 +12,7 @@ const A = styled.a`
 `;
 
 const ExternalLink = ({ to, children }) => (
-  <A href={to} target="_blank">
+  <A href={to} target="_blank" rel="noopener noreferrer">
     {children}
   </A>
 );
