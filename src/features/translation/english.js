@@ -57,5 +57,9 @@ export default {
     email_label: 'Your email',
     message_label: 'Message',
     name_label: 'Full name '
+  },
+  not_found: {
+    title: '404 Page not found',
+    subtitle: 'Are you sure you are where you want to be? 🤔'
   }
 };

@@ -58,5 +58,9 @@ export default {
     email_label: 'Din e-post',
     message_label: 'Meddelande',
     name_label: 'Ditt namn'
+  },
+  not_found: {
+    title: '404 Sidan hittades inte',
+    subtitle: 'Säker på att du är där du vill vara? 🤔'
   }
 };
