@@ -8,6 +8,7 @@ import SpotifyAuthorize from '../../spotify/components/SpotifyAuthorize';
 import { AUTHORIZE_SPOTIFY } from '../../spotify/spotifyRoutes';
 import { STATISTICS_PAGE } from '../../statistics/statisticsRoutes';
 import { SETTINGS_PAGE } from '../../settings/settingsRoutes';
+import NotFoundPage from './NotFoundPage';
 const StatisticsPage = lazy(() =>
   import('../../statistics/components/StatisticsPage')
 );
@@ -43,6 +44,7 @@ const Pages = () => (
         <ContactPage path={CONTACT_PAGE} />
         <SettingsPage path={SETTINGS_PAGE} />
         <SpotifyAuthorize path={AUTHORIZE_SPOTIFY} />
+        <NotFoundPage default />
       </Router>
     </Suspense>
   </Page>
