@@ -3,6 +3,7 @@
   "version": "0.2.7",
   "private": true,
   "homepage": "https://marcus.hansson.dev",
+  "license": "UNLICENSE",
   "dependencies": {
     "@apollo/react-hooks": "^3.0.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",

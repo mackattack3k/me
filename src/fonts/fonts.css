@@ -2,6 +2,7 @@
   font-family: 'Red Hat Text';
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: local('Red Hat Text'),
     url('Red_Hat_Text/RedHatText-Regular.ttf') format('truetype');
 }
@@ -10,6 +11,7 @@
   font-family: 'Red Hat Text';
   font-style: normal;
   font-weight: 700;
+  font-display: fallback;
   src: local('Red Hat Text'),
     url('Red_Hat_Text/RedHatText-Bold.ttf') format('truetype');
 }
@@ -18,12 +20,14 @@
   font-family: 'Red Hat Text';
   font-style: normal;
   font-weight: 500;
+  font-display: fallback;
   src: local('Red Hat Text'),
     url('Red_Hat_Text/RedHatText-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Manjari';
+  font-display: fallback;
   src: local('Manjari'), url('Manjari/Manjari-Regular.ttf') format('truetype');
 }
 
@@ -31,6 +35,7 @@
   font-family: 'Proza Libre';
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: local('Proza Libre'),
     url('ProzaLibre/ProzaLibre-Regular.ttf') format('truetype');
 }
@@ -39,6 +44,7 @@
   font-family: 'Proza Libre';
   font-style: normal;
   font-weight: 700;
+  font-display: fallback;
   src: local('Proza Libre'),
     url('ProzaLibre/ProzaLibre-Bold.ttf') format('truetype');
 }
