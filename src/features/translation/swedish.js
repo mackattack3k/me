@@ -16,7 +16,7 @@ export default {
       ' kommandot.',
     title3: 'Kool data 😎',
     section3: 'Vill du se lite riktig data istället?',
-    click_here: 'Klicka här'
+    click_here: 'Ja! Visa mig häftig data'
   },
   theme: {
     changeThemeTitle: 'Byt färg här kompis',
