@@ -10,7 +10,7 @@ const Card = styled.div`
   padding: 30px;
   background-color: ${props => props.theme.background};
   min-height: 100px;
-  min-width: 140px;
+  min-width: 200px;
   max-width: 400px;
   flex: 1;
   border-radius: 30px;

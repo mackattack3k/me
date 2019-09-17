@@ -39,7 +39,8 @@ export default {
   },
   spotify_user: {
     go_to_profile: 'Go to Spotify profile',
-    followers: 'Number of followers, yay! 🎉'
+    followers: 'Number of followers, yay! 🎉',
+    title: 'User'
   },
   error: {
     unknown: 'Something went wrong, please try again 😭',
@@ -61,5 +62,9 @@ export default {
   not_found: {
     title: '404 Page not found',
     subtitle: 'Are you sure you are where you want to be? 🤔'
+  },
+  spotify_playlist: {
+    title: 'Playlists',
+    tracks: 'tracks'
   }
 };

@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import Button from '../../button/components/Button';
 import { SpotifyAccessContext } from '../../spotify/components/SpotifyAccessProvider';
 import H1 from '../../text/components/H1';
+import SpotifyPlayLists from './SpotifyPlayLists';
 import SpotifyUser from './SpotifyUser';
 import StatisticsPageContent from './StatisticsPageContent';
 
@@ -42,7 +43,12 @@ const SpotifyStatistics = () => {
         {canUseData
           ? t('statistics.spotify')
           : t('statistics.spotify_logged_out')}
-        {canUseData && <SpotifyUser />}
+        {canUseData && (
+          <>
+            <SpotifyUser />
+            <SpotifyPlayLists />
+          </>
+        )}
         {!canUseData && (
           <AuthorizeButton>
             <Button onClick={authorize}>

@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import deepGet from '../../deepGet';
 import ErrorPage from '../../error/components/ErrorPage';
 import ExternalLink from '../../navigation/components/ExternalLink';
+import H3 from '../../text/components/H3';
 import { SPOTIFY_USER } from '../statisticsQueries';
 import StatisticsCard from './StatisticsCard';
 import StatisticsCardData from './StatisticsCardData';
@@ -18,7 +19,6 @@ const SpotifyUserCards = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 0;
 `;
 
 const ProfileImage = styled.img`
@@ -47,26 +47,31 @@ const SpotifyUser = () => {
   const { spotify: profileUrl = '' } = urls || {};
   const profileImage = deepGet(data, ['user', 'images', '0', 'url']);
   return (
-    <SpotifyUserCards>
-      <StatisticsCard>
-        <StatisticsCardData isLoading={loading}>
-          <ProfileImage src={profileImage} alt="Spotify profile avatar" />
-        </StatisticsCardData>
-        <StatisticsComment>{`${name} (${id})`}</StatisticsComment>
-        <SpotifyLink>
-          <ExternalLink to={profileUrl}>
-            <SpotifyLinkText>{t('spotify_user.go_to_profile')}</SpotifyLinkText>
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
-          </ExternalLink>
-        </SpotifyLink>
-      </StatisticsCard>
-      <StatisticsCard>
-        <StatisticsCardData isLoading={loading}>
-          {amountOfFollowers}
-        </StatisticsCardData>
-        <StatisticsComment>{t('spotify_user.followers')}</StatisticsComment>
-      </StatisticsCard>
-    </SpotifyUserCards>
+    <>
+      <H3>{t('spotify_user.title')}</H3>
+      <SpotifyUserCards>
+        <StatisticsCard>
+          <StatisticsCardData isLoading={loading}>
+            <ProfileImage src={profileImage} alt="Spotify profile avatar" />
+          </StatisticsCardData>
+          <StatisticsComment>{`${name} (${id})`}</StatisticsComment>
+          <SpotifyLink>
+            <ExternalLink to={profileUrl}>
+              <SpotifyLinkText>
+                {t('spotify_user.go_to_profile')}
+              </SpotifyLinkText>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
+          </SpotifyLink>
+        </StatisticsCard>
+        <StatisticsCard>
+          <StatisticsCardData isLoading={loading}>
+            {amountOfFollowers}
+          </StatisticsCardData>
+          <StatisticsComment>{t('spotify_user.followers')}</StatisticsComment>
+        </StatisticsCard>
+      </SpotifyUserCards>
+    </>
   );
 };
 
