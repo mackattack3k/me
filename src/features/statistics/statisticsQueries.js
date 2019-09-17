@@ -52,8 +52,8 @@ export const SPOTIFY_USER = gql`
 
 export const SPOTIFY_USER_PLAYLISTS = gql`
   {
-    playlist @rest(type: "user", path: "users/cocoix/playlists") {
-      total
+    playlist @rest(type: "user", path: "users/cocoix/playlists?limit=50") {
+      items
     }
   }
 `;

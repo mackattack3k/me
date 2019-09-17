@@ -62,5 +62,8 @@ export default {
   not_found: {
     title: '404 Sidan hittades inte',
     subtitle: 'Säker på att du är där du vill vara? 🤔'
+  },
+  spotify_playlist: {
+    title: 'Spellistor'
   }
 };

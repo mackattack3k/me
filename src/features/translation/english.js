@@ -61,5 +61,8 @@ export default {
   not_found: {
     title: '404 Page not found',
     subtitle: 'Are you sure you are where you want to be? 🤔'
+  },
+  spotify_playlist: {
+    title: 'Playlists'
   }
 };
