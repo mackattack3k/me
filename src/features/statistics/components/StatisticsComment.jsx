@@ -8,6 +8,7 @@ const Comment = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  flex: 1;
 `;
 
 const StatisticsComment = ({ children }) => <Comment>{children}</Comment>;

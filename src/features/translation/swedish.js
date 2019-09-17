@@ -65,6 +65,7 @@ export default {
     subtitle: 'Säker på att du är där du vill vara? 🤔'
   },
   spotify_playlist: {
-    title: 'Spellistor'
+    title: 'Spellistor',
+    tracks: 'låtar'
   }
 };

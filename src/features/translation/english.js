@@ -64,6 +64,7 @@ export default {
     subtitle: 'Are you sure you are where you want to be? 🤔'
   },
   spotify_playlist: {
-    title: 'Playlists'
+    title: 'Playlists',
+    tracks: 'tracks'
   }
 };

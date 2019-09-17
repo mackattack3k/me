@@ -6,7 +6,7 @@ import ErrorPage from '../../error/components/ErrorPage';
 import LoadingSpinner from '../../loading/components/LoadingSpinner';
 import H3 from '../../text/components/H3';
 import { SPOTIFY_USER_PLAYLISTS } from '../statisticsQueries';
-import StatisticsCard from './StatisticsCard';
+import PlayListCard from './PlayListCard';
 
 const PlayLists = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ const SpotifyPlayLists = () => {
       ) : (
         <PlayLists>
           {items.map(playlist => (
-            <StatisticsCard key={playlist.id}>{playlist.name}</StatisticsCard>
+            <PlayListCard key={playlist.id} playlist={playlist} />
           ))}
         </PlayLists>
       )}

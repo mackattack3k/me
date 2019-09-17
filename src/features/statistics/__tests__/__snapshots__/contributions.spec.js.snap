@@ -40,7 +40,7 @@ Object {
   padding: 30px;
   background-color: #252525;
   min-height: 100px;
-  min-width: 140px;
+  min-width: 200px;
   max-width: 400px;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -60,12 +60,22 @@ Object {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 10px 0;
   font-size: 28px;
   color: #ffca28;
+  text-shadow: 0 0 10px rgba(0,0,0,0.1);
+  word-break: break-word;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
 }
 
 .c3 {
@@ -83,6 +93,9 @@ Object {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c0 {
@@ -183,38 +196,38 @@ Object {
       class="sc-gzVnrw dtKQxx"
     >
       <div
-        class="sc-bxivhb bVdJga"
+        class="sc-bxivhb kTSVVS"
       >
         <div
-          class="sc-EHOje hTYuRo"
+          class="sc-EHOje dbgUUq"
         >
           5
         </div>
         <div
-          class="sc-bZQynM bmiwFs"
+          class="sc-bZQynM Cfuiy"
         >
           Commits since last year
         </div>
       </div>
       <div
-        class="sc-bxivhb bVdJga"
+        class="sc-bxivhb kTSVVS"
       >
         <div
-          class="sc-EHOje hTYuRo"
+          class="sc-EHOje dbgUUq"
         >
           5
         </div>
         <div
-          class="sc-bZQynM bmiwFs"
+          class="sc-bZQynM Cfuiy"
         >
           Issues closed ⛔️
         </div>
       </div>
       <div
-        class="sc-bxivhb bVdJga"
+        class="sc-bxivhb kTSVVS"
       >
         <div
-          class="sc-EHOje hTYuRo"
+          class="sc-EHOje dbgUUq"
         >
           <a
             class="sc-htpNat jsBWPD"
@@ -237,7 +250,7 @@ Object {
           </a>
         </div>
         <div
-          class="sc-bZQynM bmiwFs"
+          class="sc-bZQynM Cfuiy"
         >
           Is the latest starred repository ⭐️
         </div>
