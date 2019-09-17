@@ -20,19 +20,20 @@ const SpotifyPlayLists = () => {
   if (error) {
     return <ErrorPage />;
   }
-  if (loading) {
-    return <LoadingSpinner />;
-  }
   const { playlist: playlists = {} } = data || {};
   const { items = [] } = playlists;
   return (
     <div>
       <H3>{t('spotify_playlist.title')}</H3>
-      <PlayLists>
-        {items.map(playlist => (
-          <StatisticsCard key={playlist.id}>{playlist.name}</StatisticsCard>
-        ))}
-      </PlayLists>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <PlayLists>
+          {items.map(playlist => (
+            <StatisticsCard key={playlist.id}>{playlist.name}</StatisticsCard>
+          ))}
+        </PlayLists>
+      )}
     </div>
   );
 };
