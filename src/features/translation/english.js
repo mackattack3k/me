@@ -16,7 +16,7 @@ export default {
       ' advanced command',
     title3: 'Cool data 😎',
     section3: 'Do you want to see som real time stats instead?',
-    click_here: 'Click here'
+    click_here: 'Yes! Show me awesome data'
   },
   theme: {
     changeThemeTitle: 'Make it easier on your eyes',

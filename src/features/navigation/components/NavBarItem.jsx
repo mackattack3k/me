@@ -26,8 +26,8 @@ const LinkText = styled.div`
   }
 `;
 
-const NavBarItem = ({ to, icon, children }) => (
-  <NavBarLink to={to}>
+const NavBarItem = ({ to, icon, children, ariaLabel }) => (
+  <NavBarLink to={to} aria-label={ariaLabel}>
     <Navigation>
       <FontAwesomeIcon icon={icon} />
       <LinkText>{children}</LinkText>
@@ -38,7 +38,8 @@ const NavBarItem = ({ to, icon, children }) => (
 NavBarItem.propTypes = {
   to: PropTypes.string.isRequired,
   icon: PropTypes.shape().isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  ariaLabel: PropTypes.string.isRequired
 };
 
 export default NavBarItem;

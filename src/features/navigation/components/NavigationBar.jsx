@@ -39,16 +39,32 @@ const NavigationBar = () => {
     <Background>
       <ProfileBadge />
       <Nav>
-        <NavBarItem to={HOME_PAGE} icon={faUser}>
+        <NavBarItem
+          to={HOME_PAGE}
+          icon={faUser}
+          ariaLabel="Go back to start page"
+        >
           {t('routes.home')}
         </NavBarItem>
-        <NavBarItem to={STATISTICS_PAGE} icon={faGlasses}>
+        <NavBarItem
+          to={STATISTICS_PAGE}
+          icon={faGlasses}
+          ariaLabel="See all statistics"
+        >
           {t('routes.statistics')}
         </NavBarItem>
-        <NavBarItem to={SETTINGS_PAGE} icon={faCog}>
+        <NavBarItem
+          to={SETTINGS_PAGE}
+          icon={faCog}
+          ariaLabel="Change page settings"
+        >
           {t('routes.settings')}
         </NavBarItem>
-        <NavBarItem to={CONTACT_PAGE} icon={faEnvelope}>
+        <NavBarItem
+          to={CONTACT_PAGE}
+          icon={faEnvelope}
+          ariaLabel="Contact page owner"
+        >
           {t('routes.contact')}
         </NavBarItem>
       </Nav>
