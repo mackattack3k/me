@@ -1,10 +1,11 @@
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import wait from 'waait';
 import AllMockProviders from '../../../testproviders/AllMockProviders';
 import SpotifyUser from '../components/SpotifyUser';
 import english from '../../translation/english';
+import { SPOTIFY_USER } from '../statisticsQueries';
 
 const mountMockedProvider = async () => {
   const component = render(
@@ -17,9 +18,15 @@ const mountMockedProvider = async () => {
   return component;
 };
 const errorMockProvider = async () => {
+  const spotifyErrorMock = {
+    request: {
+      query: SPOTIFY_USER
+    },
+    error: new Error('aw shucks')
+  };
   const component = render(
     <AllMockProviders>
-      <MockedProvider mocks={undefined}>
+      <MockedProvider mocks={[spotifyErrorMock]}>
         <SpotifyUser />
       </MockedProvider>
     </AllMockProviders>

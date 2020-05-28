@@ -131,7 +131,7 @@ Object {
           <div
             class="c2"
           >
-            5
+            0
           </div>
           <div
             class="c3"
@@ -145,7 +145,7 @@ Object {
           <div
             class="c2"
           >
-            5
+            0
           </div>
           <div
             class="c3"
@@ -161,23 +161,19 @@ Object {
           >
             <a
               class="c4"
-              href="http://test.com"
+              href=""
               rel="noopener noreferrer"
               target="_blank"
-            >
-              Hello World
-            </a>
+            />
             <span>
               /
             </span>
             <a
               class="c4"
-              href="http://test.com"
+              href=""
               rel="noopener noreferrer"
               target="_blank"
-            >
-              Hello World
-            </a>
+            />
           </div>
           <div
             class="c3"
@@ -193,71 +189,67 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-gzVnrw dtKQxx"
+      class="sc-Axmtr chKkkS"
     >
       <div
-        class="sc-bxivhb kTSVVS"
+        class="sc-AxhCb jUwasP"
       >
         <div
-          class="sc-EHOje dbgUUq"
+          class="sc-AxgMl fcRPoA"
         >
-          5
+          0
         </div>
         <div
-          class="sc-bZQynM Cfuiy"
+          class="sc-AxheI fsKHkg"
         >
           Commits since last year
         </div>
       </div>
       <div
-        class="sc-bxivhb kTSVVS"
+        class="sc-AxhCb jUwasP"
       >
         <div
-          class="sc-EHOje dbgUUq"
+          class="sc-AxgMl fcRPoA"
         >
-          5
+          0
         </div>
         <div
-          class="sc-bZQynM Cfuiy"
+          class="sc-AxheI fsKHkg"
         >
           Issues closed ⛔️
         </div>
       </div>
       <div
-        class="sc-bxivhb kTSVVS"
+        class="sc-AxhCb jUwasP"
       >
         <div
-          class="sc-EHOje dbgUUq"
+          class="sc-AxgMl fcRPoA"
         >
           <a
-            class="sc-htpNat jsBWPD"
-            href="http://test.com"
+            class="sc-AxiKw eBNHRm"
+            href=""
             rel="noopener noreferrer"
             target="_blank"
-          >
-            Hello World
-          </a>
+          />
           <span>
             /
           </span>
           <a
-            class="sc-htpNat jsBWPD"
-            href="http://test.com"
+            class="sc-AxiKw eBNHRm"
+            href=""
             rel="noopener noreferrer"
             target="_blank"
-          >
-            Hello World
-          </a>
+          />
         </div>
         <div
-          class="sc-bZQynM Cfuiy"
+          class="sc-AxheI fsKHkg"
         >
           Is the latest starred repository ⭐️
         </div>
       </div>
     </div>
     <div
-      class="sc-bwzfXH ftCJGa"
+      class="sc-AxirZ ejZzxV"
     />
   </div>,
   "debug": [Function],
