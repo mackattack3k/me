@@ -1,10 +1,12 @@
 import { importSchema } from 'graphql-import';
 import React from 'react';
-import { ApolloProvider } from '@apollo/react-hooks';
+import { ApolloProvider } from '@apollo/client';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { SchemaLink } from 'apollo-link-schema';
-import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
+import { makeExecutableSchema } from '@graphql-tools/schema';
+import { addMocksToSchema } from 'graphql-tools';
+
 import PropTypes from 'prop-types';
 
 const GithubMockProvider = ({ children, mockResolvers }) => {
@@ -18,10 +20,11 @@ const GithubMockProvider = ({ children, mockResolvers }) => {
 
   const defaultMocks = {
     URI: () => 'http://test.com',
-    Int: () => 5
+    Int: () => 5,
+    String: () => 'Hey'
   };
 
-  addMockFunctionsToSchema({
+  addMocksToSchema({
     schema,
     mocks: { ...defaultMocks, ...mockResolvers }
   });

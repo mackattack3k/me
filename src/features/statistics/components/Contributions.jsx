@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
@@ -24,6 +24,7 @@ const NO_HITS = 0;
 const Contributions = () => {
   const { t } = useTranslation();
   const { loading, error, data } = useQuery(GITHUB_CONTRIBUTIONS);
+  console.log({ loading, error, data });
   if (error) {
     return <ErrorPage />;
   }

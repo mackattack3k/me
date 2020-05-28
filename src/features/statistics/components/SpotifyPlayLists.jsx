@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
@@ -29,7 +29,7 @@ const SpotifyPlayLists = () => {
         <LoadingSpinner />
       ) : (
         <PlayLists>
-          {items.map(playlist => (
+          {items.map((playlist) => (
             <PlayListCard key={playlist.id} playlist={playlist} />
           ))}
         </PlayLists>
